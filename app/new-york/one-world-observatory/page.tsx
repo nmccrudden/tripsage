@@ -64,3 +64,6 @@ const buttonStyle: React.CSSProperties = {
   color: "white",
   cursor: "pointer",
 };
+<p style={{ marginTop: "40px", fontSize: "12px", color: "#777" }}>
+  TripSage may earn a small commission if you book through our links, at no extra cost to you.
+</p>
