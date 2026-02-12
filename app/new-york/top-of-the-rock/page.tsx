@@ -1,53 +1,57 @@
+import Link from "next/link";
+
 export default function TopOfTheRock() {
   return (
-    <main style={{ fontFamily: "system-ui, -apple-system, sans-serif" }}>
-      <section style={{ maxWidth: 960, margin: "0 auto", padding: "64px 24px" }}>
-        <h1>Top of the Rock — Best Value Options</h1>
-        <p>
-          TripSage recommends the best value ways to visit Top of the Rock based
-          on price, flexibility, and availability.
-        </p>
+    <main style={{ padding: "60px 24px", fontFamily: "system-ui", maxWidth: "900px", margin: "0 auto" }}>
+      <Link href="/" style={{ textDecoration: "none", color: "#555" }}>
+        ← Back to New York
+      </Link>
 
-        <div style={{ border: "1px solid #eee", borderRadius: 8, padding: 16, marginTop: 24 }}>
-          🏆 <strong>Best Value Overall</strong>
-          <p>Price: $XX</p>
-          <p>Why: Trusted seller • Good availability</p>
-          <a href="#" style={{ color: "#1F3A5F", fontWeight: 600 }}>
-            Buy Ticket →
-          </a>
+      <h1 style={{ fontSize: "42px", marginTop: "16px" }}>
+        Top of the Rock Tickets
+      </h1>
+
+      <p style={{ fontSize: "18px", color: "#555", maxWidth: "700px" }}>
+        TripSage compares Top of the Rock ticket options based on price, flexibility, and availability.
+      </p>
+
+      <div style={{ display: "grid", gap: "20px", marginTop: "40px" }}>
+        <div style={cardStyle}>
+          <h3>🏆 Best Value Overall</h3>
+          <p>Cheapest reliable ticket with no unnecessary extras.</p>
+          <button style={buttonStyle}>View best deal</button>
         </div>
 
-        <div style={{ border: "1px solid #eee", borderRadius: 8, padding: 16, marginTop: 16 }}>
-          🕒 <strong>Best for Late Planners</strong>
-          <p>Price: $XX</p>
-          <p>Why: Available today</p>
-          <a href="#" style={{ color: "#1F3A5F", fontWeight: 600 }}>
-            Buy Ticket →
-          </a>
+        <div style={cardStyle}>
+          <h3>🔁 Best Refundable Option</h3>
+          <p>Flexible ticket with free cancellation.</p>
+          <button style={buttonStyle}>View refundable ticket</button>
         </div>
 
-        <div style={{ border: "1px solid #eee", borderRadius: 8, padding: 16, marginTop: 16 }}>
-          🔁 <strong>Best Refundable Option</strong>
-          <p>Price: $XX</p>
-          <p>Why: Free cancellation available</p>
-          <a href="#" style={{ color: "#1F3A5F", fontWeight: 600 }}>
-            Buy Ticket →
-          </a>
+        <div style={cardStyle}>
+          <h3>⏱ Best for Late Planners</h3>
+          <p>Available today or tomorrow with instant confirmation.</p>
+          <button style={buttonStyle}>View last-minute options</button>
         </div>
-
-        <div style={{ border: "1px solid #eee", borderRadius: 8, padding: 16, marginTop: 16 }}>
-          👨‍👩‍👧 <strong>Best for Families</strong>
-          <p>Price: $XX</p>
-          <p>Why: Child discounts available</p>
-          <a href="#" style={{ color: "#1F3A5F", fontWeight: 600 }}>
-            Buy Ticket →
-          </a>
-        </div>
-
-        <p style={{ marginTop: 24, fontSize: 13, color: "#777" }}>
-          We may earn a small commission at no extra cost to you.
-        </p>
-      </section>
+      </div>
     </main>
   );
 }
+
+const cardStyle: React.CSSProperties = {
+  border: "1px solid #eee",
+  borderRadius: "16px",
+  padding: "20px",
+  background: "white",
+  boxShadow: "0 10px 24px rgba(0,0,0,0.06)",
+};
+
+const buttonStyle: React.CSSProperties = {
+  marginTop: "12px",
+  padding: "10px 14px",
+  borderRadius: "10px",
+  border: "none",
+  background: "#111",
+  color: "white",
+  cursor: "pointer",
+};
