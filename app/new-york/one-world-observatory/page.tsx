@@ -21,7 +21,7 @@ export default function OneWorld() {
           <h3>🏆 Best Value Overall</h3>
           <p>Cheapest reliable ticket with no unnecessary extras.</p>
           <<a
-  href="PASTE_YOUR_AFFILIATE_LINK_HERE"
+  href="https://www.getyourguide.com/new-york-city-l59/nyc-one-world-observatory-skip-the-line-ticket-t552373/?partner_id=UXBBWLN&utm_medium=online_publisher"
   target="_blank"
   rel="noopener noreferrer"
   style={{ ...buttonStyle, display: "inline-block", textDecoration: "none", textAlign: "center" }}
