@@ -20,7 +20,15 @@ export default function OneWorld() {
         <div style={cardStyle}>
           <h3>🏆 Best Value Overall</h3>
           <p>Cheapest reliable ticket with no unnecessary extras.</p>
-          <button style={buttonStyle}>View best deal</button>
+          <<a
+  href="PASTE_YOUR_AFFILIATE_LINK_HERE"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{ ...buttonStyle, display: "inline-block", textDecoration: "none", textAlign: "center" }}
+>
+  View best deal
+</a>
+>
         </div>
 
         <div style={cardStyle}>
