@@ -55,7 +55,7 @@ export default function Home() {
           position: "relative",
           height: "72vh",
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=2070&auto=format&fit=crop')",
+            "url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=2070&auto=format&fit=crop')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -118,12 +118,12 @@ export default function Home() {
           >
             <AttractionCard
               title="One World Observatory"
-              image="https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=1932&auto=format&fit=crop"
+              image="https://images.unsplash.com/photo-1545156521-77bd85671d30?q=80&w=1932&auto=format&fit=crop"
               href="/new-york/one-world-observatory"
             />
             <AttractionCard
               title="Top of the Rock"
-              image="https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=1932&auto=format&fit=crop"
+              image="https://images.unsplash.com/photo-1522083165195-3424ed129620?q=80&w=1932&auto=format&fit=crop"
               href="/new-york/top-of-the-rock"
             />
             <AttractionCard
@@ -133,7 +133,7 @@ export default function Home() {
             />
             <AttractionCard
               title="SUMMIT One Vanderbilt"
-              image="https://images.unsplash.com/photo-1684500038750-29fa8b9a2b5b?q=80&w=1932&auto=format&fit=crop"
+              image="https://images.unsplash.com/photo-1643214853479-7a4e2d8b1c3b?q=80&w=1932&auto=format&fit=crop"
               href="/new-york/summit-one-vanderbilt"
             />
             <AttractionCard
