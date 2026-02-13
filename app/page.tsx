@@ -1,95 +1,51 @@
 import Link from "next/link";
 
-const attractions = [
-  {
-    title: "One World Observatory",
-    href: "/new-york/one-world-observatory",
-    desc: "Sky-high views from the tallest building in the Western Hemisphere.",
-  },
-  {
-    title: "Top of the Rock",
-    href: "/new-york/top-of-the-rock",
-    desc: "Iconic Rockefeller Center views with classic skyline views.",
-  },
-  {
-    title: "Empire State Building",
-    href: "/new-york/empire-state-building",
-    desc: "The legendary Art Deco skyscraper experience.",
-  },
-  {
-    title: "SUMMIT One Vanderbilt",
-    href: "/new-york/summit-one-vanderbilt",
-    desc: "Immersive glass floors, mirrors, and sky boxes.",
-  },
-  {
-    title: "Statue of Liberty",
-    href: "/new-york/statue-of-liberty",
-    desc: "The most famous symbol of New York and the USA.",
-  },
-];
-
 export default function Home() {
   return (
-    <main
-      style={{
-        minHeight: "100vh",
-        padding: "80px 24px",
-        background: "linear-gradient(180deg, #f8fafc 0%, #ffffff 60%)",
-        fontFamily: "system-ui",
-      }}
-    >
-      <section
-        style={{
-          maxWidth: "1100px",
-          margin: "0 auto 60px auto",
-          textAlign: "center",
-        }}
-      >
-        <h1 style={{ fontSize: "56px", marginBottom: "16px" }}>TripSage</h1>
-        <p style={{ fontSize: "22px", color: "#555", marginBottom: "12px" }}>
-          See more. Spend less.
+    <main style={{ padding: "80px 24px", fontFamily: "system-ui", maxWidth: "1000px", margin: "0 auto" }}>
+      <header style={{ marginBottom: "60px" }}>
+        <h1 style={{ fontSize: "56px", letterSpacing: "-1px" }}>TripSage</h1>
+        <p style={{ fontSize: "20px", color: "#555", maxWidth: "700px" }}>
+          See more. Spend less.  
+          Your smart guide to the best-value attractions in top cities.
         </p>
-        <p style={{ maxWidth: "680px", margin: "0 auto", color: "#444" }}>
-          Find the best-value tickets for New York attractions based on your situation —
-          refundable, last-minute, family-friendly, or best overall value.
-        </p>
+      </header>
+
+      <section>
+        <h2 style={{ fontSize: "32px", marginBottom: "24px" }}>New York City</h2>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "20px" }}>
+          <CityCard title="One World Observatory" href="/new-york/one-world-observatory" />
+          <CityCard title="Top of the Rock" href="/new-york/top-of-the-rock" />
+          <CityCard title="Empire State Building" href="/new-york/empire-state-building" />
+          <CityCard title="SUMMIT One Vanderbilt" href="/new-york/summit-one-vanderbilt" />
+          <CityCard title="Statue of Liberty" href="/new-york/statue-of-liberty" />
+        </div>
       </section>
 
-      <section
+      <footer style={{ marginTop: "80px", fontSize: "12px", color: "#777" }}>
+        TripSage may earn a small commission if you book through our links, at no extra cost to you.
+      </footer>
+    </main>
+  );
+}
+
+function CityCard({ title, href }: { title: string; href: string }) {
+  return (
+    <Link href={href} style={{ textDecoration: "none" }}>
+      <div
         style={{
-          maxWidth: "1100px",
-          margin: "0 auto",
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-          gap: "24px",
+          border: "1px solid #eee",
+          borderRadius: "16px",
+          padding: "24px",
+          background: "white",
+          boxShadow: "0 10px 24px rgba(0,0,0,0.06)",
+          transition: "transform 0.15s ease",
         }}
       >
-        {attractions.map((a) => (
-          <Link
-            key={a.href}
-            href={a.href}
-            style={{
-              textDecoration: "none",
-              color: "inherit",
-              borderRadius: "16px",
-              padding: "24px",
-              background: "white",
-              boxShadow: "0 10px 24px rgba(0,0,0,0.08)",
-              transition: "transform 0.2s ease, box-shadow 0.2s ease",
-            }}
-          >
-            <div>
-              <h3 style={{ fontSize: "20px", marginBottom: "8px" }}>
-                {a.title}
-              </h3>
-              <p style={{ fontSize: "14px", color: "#666", marginBottom: "16px" }}>
-                {a.desc}
-              </p>
-              <span style={{ fontWeight: 600 }}>View best options →</span>
-            </div>
-          </Link>
-        ))}
-      </section>
-    </main>
+        <h3 style={{ fontSize: "20px", color: "#111" }}>{title}</h3>
+        <p style={{ color: "#555" }}>Compare tickets →</p>
+      </div>
+    </Link>
   );
 }
