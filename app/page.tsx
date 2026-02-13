@@ -2,99 +2,151 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main style={{ fontFamily: "system-ui", background: "#0b1220", color: "white", minHeight: "100vh" }}>
-      {/* Hero */}
-      <section
+    <main style={{ fontFamily: "system-ui", background: "#ffffff", color: "#111", minHeight: "100vh" }}>
+      {/* Header */}
+      <header
         style={{
-          position: "relative",
-          minHeight: "80vh",
-          backgroundImage:
-            "linear-gradient(rgba(11,18,32,0.6), rgba(11,18,32,0.85)), url('https://images.unsplash.com/photo-1549640364-6f7b43bfbac4?q=80&w=2070&auto=format&fit=crop')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          padding: "80px 24px",
+          position: "sticky",
+          top: 0,
+          background: "rgba(255,255,255,0.9)",
+          backdropFilter: "blur(8px)",
+          borderBottom: "1px solid #eee",
+          zIndex: 10,
         }}
       >
-        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-          <header style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "120px" }}>
+        <div
+          style={{
+            maxWidth: "1200px",
+            margin: "0 auto",
+            padding: "16px 24px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
+          <div style={{ display: "flex", alignItems: "center", gap: "10px", fontWeight: 700 }}>
             <div
               style={{
-                width: "44px",
-                height: "44px",
-                borderRadius: "12px",
-                background: "linear-gradient(135deg, #5b8cff, #7b5bff)",
+                width: "36px",
+                height: "36px",
+                borderRadius: "10px",
+                background: "linear-gradient(135deg, #ff385c, #ff7a5c)",
+                color: "white",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                fontWeight: 800,
-                fontSize: "18px",
+                fontSize: "14px",
               }}
             >
               TS
             </div>
-            <span style={{ fontSize: "20px", fontWeight: 700 }}>TripSage</span>
-          </header>
+            TripSage
+          </div>
 
-          <h1 style={{ fontSize: "64px", lineHeight: 1.1, maxWidth: "700px", marginBottom: "20px" }}>
-            Find the best-value tickets for top attractions
+          <Link href="/new-york/one-world-observatory" style={{ textDecoration: "none", color: "#111" }}>
+            Explore NYC
+          </Link>
+        </div>
+      </header>
+
+      {/* Hero */}
+      <section
+        style={{
+          position: "relative",
+          height: "70vh",
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1549640364-6f7b43bfbac4?q=80&w=2070&auto=format&fit=crop')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background:
+              "linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.6))",
+          }}
+        />
+
+        <div
+          style={{
+            position: "relative",
+            maxWidth: "1200px",
+            margin: "0 auto",
+            padding: "120px 24px",
+            color: "white",
+          }}
+        >
+          <h1 style={{ fontSize: "64px", maxWidth: "720px", lineHeight: 1.05 }}>
+            See more. Spend less.
           </h1>
-          <p style={{ fontSize: "20px", color: "#d1d5db", maxWidth: "640px", marginBottom: "32px" }}>
-            Skip the clutter. TripSage shows you the best options based on your situation — value, flexibility, and
-            last-minute availability.
+          <p style={{ fontSize: "20px", maxWidth: "600px", marginTop: "16px", color: "#f3f4f6" }}>
+            TripSage helps you find the best-value tickets for top attractions and shows — without the overwhelm.
           </p>
 
           <Link
             href="/new-york/one-world-observatory"
             style={{
               display: "inline-block",
-              background: "linear-gradient(135deg, #5b8cff, #7b5bff)",
+              marginTop: "28px",
+              background: "#ff385c",
               padding: "14px 22px",
-              borderRadius: "12px",
+              borderRadius: "999px",
               color: "white",
               textDecoration: "none",
               fontWeight: 600,
             }}
           >
-            Explore New York →
+            Start exploring
           </Link>
         </div>
       </section>
 
-      {/* Featured City */}
-      <section style={{ padding: "80px 24px", background: "#0f172a" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-          <h2 style={{ fontSize: "36px", marginBottom: "24px" }}>New York City</h2>
+      {/* City section */}
+      <section style={{ padding: "80px 24px" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <h2 style={{ fontSize: "36px", marginBottom: "24px" }}>Explore New York City</h2>
 
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-              gap: "20px",
+              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+              gap: "24px",
             }}
           >
-            <CityCard title="One World Observatory" href="/new-york/one-world-observatory" />
-            <CityCard title="Top of the Rock" href="/new-york/top-of-the-rock" />
-            <CityCard title="Empire State Building" href="/new-york/empire-state-building" />
-            <CityCard title="SUMMIT One Vanderbilt" href="/new-york/summit-one-vanderbilt" />
-            <CityCard title="Statue of Liberty" href="/new-york/statue-of-liberty" />
+            <AttractionCard
+              title="One World Observatory"
+              image="https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=1932&auto=format&fit=crop"
+              href="/new-york/one-world-observatory"
+            />
+            <AttractionCard
+              title="Top of the Rock"
+              image="https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=1932&auto=format&fit=crop"
+              href="/new-york/top-of-the-rock"
+            />
+            <AttractionCard
+              title="Empire State Building"
+              image="https://images.unsplash.com/photo-1545259741-2ea3ebf61fa3?q=80&w=1932&auto=format&fit=crop"
+              href="/new-york/empire-state-building"
+            />
+            <AttractionCard
+              title="SUMMIT One Vanderbilt"
+              image="https://images.unsplash.com/photo-1643214853479-7a4e2d8b1c3b?q=80&w=1932&auto=format&fit=crop"
+              href="/new-york/summit-one-vanderbilt"
+            />
+            <AttractionCard
+              title="Statue of Liberty"
+              image="https://images.unsplash.com/photo-1562004760-aceed7bb0fe3?q=80&w=1932&auto=format&fit=crop"
+              href="/new-york/statue-of-liberty"
+            />
           </div>
         </div>
       </section>
 
-      {/* Trust */}
-      <section style={{ padding: "80px 24px", background: "#020617" }}>
-        <div style={{ maxWidth: "900px", margin: "0 auto", textAlign: "center" }}>
-          <h3 style={{ fontSize: "28px", marginBottom: "12px" }}>Why TripSage?</h3>
-          <p style={{ color: "#9ca3af" }}>
-            We compare tickets across trusted providers and highlight the best options for different types of travellers.
-            No upsells. No spam. Just better choices.
-          </p>
-        </div>
-      </section>
-
       {/* Footer */}
-      <footer style={{ padding: "40px 24px", background: "#020617", color: "#9ca3af", fontSize: "13px" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
+      <footer style={{ padding: "40px 24px", borderTop: "1px solid #eee", fontSize: "13px", color: "#666" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           TripSage may earn a small commission if you book through our links, at no extra cost to you.
         </div>
       </footer>
@@ -102,20 +154,38 @@ export default function Home() {
   );
 }
 
-function CityCard({ title, href }: { title: string; href: string }) {
+function AttractionCard({
+  title,
+  image,
+  href,
+}: {
+  title: string;
+  image: string;
+  href: string;
+}) {
   return (
     <Link href={href} style={{ textDecoration: "none" }}>
       <div
         style={{
-          background: "#020617",
-          borderRadius: "16px",
-          padding: "22px",
-          border: "1px solid #1f2933",
+          borderRadius: "18px",
+          overflow: "hidden",
+          boxShadow: "0 12px 28px rgba(0,0,0,0.12)",
           transition: "transform 0.15s ease",
+          background: "white",
         }}
       >
-        <h3 style={{ fontSize: "18px", marginBottom: "6px", color: "white" }}>{title}</h3>
-        <p style={{ color: "#9ca3af", fontSize: "14px" }}>Compare tickets →</p>
+        <div
+          style={{
+            height: "180px",
+            backgroundImage: `url('${image}')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+        <div style={{ padding: "16px" }}>
+          <h3 style={{ fontSize: "18px", color: "#111", marginBottom: "4px" }}>{title}</h3>
+          <p style={{ fontSize: "14px", color: "#666" }}>Compare tickets</p>
+        </div>
       </div>
     </Link>
   );
