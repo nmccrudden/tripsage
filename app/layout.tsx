@@ -14,6 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body style={{ margin: 0, fontFamily: "system-ui", background: "#ffffff", color: "#111" }}>
+        {/* Header */}
         <header
           style={{
             position: "fixed",
@@ -46,8 +47,22 @@ export default function RootLayout({
           </div>
         </header>
 
-        {/* This line is what makes your pages show up */}
-        <div style={{ paddingTop: "72px" }}>{children}</div>
+        {/* Page content */}
+        <div style={{ paddingTop: "72px", minHeight: "100vh" }}>{children}</div>
+
+        {/* Global footer with disclosure */}
+        <footer
+          style={{
+            borderTop: "1px solid #eee",
+            padding: "24px",
+            textAlign: "center",
+            fontSize: "12px",
+            color: "#777",
+            background: "#fafafa",
+          }}
+        >
+          TripSage may earn a small commission if you book through our links, at no extra cost to you.
+        </footer>
       </body>
     </html>
   );
