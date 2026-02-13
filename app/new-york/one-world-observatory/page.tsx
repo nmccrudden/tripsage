@@ -21,9 +21,23 @@ export default function OneWorld() {
           alignItems: "center",
         }}
       >
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,0.7), rgba(0,0,0,0.35))" }} />
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: "linear-gradient(180deg, rgba(0,0,0,0.7), rgba(0,0,0,0.35))",
+          }}
+        />
 
-        <div style={{ position: "relative", maxWidth: "1200px", margin: "0 auto", padding: "140px 24px 80px", color: "white" }}>
+        <div
+          style={{
+            position: "relative",
+            maxWidth: "1200px",
+            margin: "0 auto",
+            padding: "140px 24px 80px",
+            color: "white",
+          }}
+        >
           <Link href="/new-york" style={{ color: "white", textDecoration: "none", fontSize: "14px" }}>
             ← Back to New York
           </Link>
@@ -38,22 +52,54 @@ export default function OneWorld() {
       <section style={{ maxWidth: "1200px", margin: "0 auto", padding: "80px 24px" }}>
         <h2 style={{ fontSize: "32px", marginBottom: "24px" }}>Best options right now</h2>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "24px" }}>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+            gap: "24px",
+          }}
+        >
           {["View best deal", "View refundable ticket", "View last-minute options"].map((label) => (
-            <div key={label} style={{ border: "1px solid #eee", borderRadius: "18px", padding: "24px", background: "white", boxShadow: "0 12px 30px rgba(0,0,0,0.06)" }}>
+            <div
+              key={label}
+              style={{
+                border: "1px solid #eee",
+                borderRadius: "18px",
+                padding: "24px",
+                background: "white",
+                boxShadow: "0 12px 30px rgba(0,0,0,0.06)",
+              }}
+            >
               <h3>{label.replace("View ", "").replace(" options", "")}</h3>
-              <p style={{ color: "#555" }}>Compare current availability and pricing from trusted platforms.</p>
+              <p style={{ color: "#555" }}>
+                Compare current availability and pricing from trusted platforms.
+              </p>
               <a
                 href="https://www.getyourguide.com/new-york-city-l59/nyc-one-world-observatory-skip-the-line-ticket-t552373/?partner_id=UXBBWLN&utm_medium=online_publisher"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ display: "inline-block", marginTop: "12px", padding: "12px 18px", borderRadius: "999px", background: "#111", color: "white", textDecoration: "none", fontWeight: 600, fontSize: "14px" }}
+                style={{
+                  display: "inline-block",
+                  marginTop: "12px",
+                  padding: "12px 18px",
+                  borderRadius: "999px",
+                  background: "#111",
+                  color: "white",
+                  textDecoration: "none",
+                  fontWeight: 600,
+                  fontSize: "14px",
+                }}
               >
                 {label}
               </a>
             </div>
           ))}
         </div>
+
+        {/* Trust cue */}
+        <p style={{ marginTop: "32px", fontSize: "14px", color: "#666" }}>
+          We compare prices across trusted booking platforms. Rankings aren’t sponsored.
+        </p>
       </section>
     </main>
   );
