@@ -9,7 +9,7 @@ export default function Home() {
           position: "sticky",
           top: 0,
           background: "rgba(255,255,255,0.9)",
-          backdropFilter: "blur(8px)",
+          backdropFilter: "blur(10px)",
           borderBottom: "1px solid #eee",
           zIndex: 10,
         }}
@@ -18,19 +18,19 @@ export default function Home() {
           style={{
             maxWidth: "1200px",
             margin: "0 auto",
-            padding: "16px 24px",
+            padding: "18px 24px",
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
           }}
         >
-          <div style={{ display: "flex", alignItems: "center", gap: "10px", fontWeight: 700 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "10px", fontWeight: 700, fontSize: "18px" }}>
             <div
               style={{
                 width: "36px",
                 height: "36px",
-                borderRadius: "10px",
-                background: "linear-gradient(135deg, #ff385c, #ff7a5c)",
+                borderRadius: "12px",
+                background: "linear-gradient(135deg, #ff6a88, #ff8e53)",
                 color: "white",
                 display: "flex",
                 alignItems: "center",
@@ -43,8 +43,8 @@ export default function Home() {
             TripSage
           </div>
 
-          <Link href="/new-york/one-world-observatory" style={{ textDecoration: "none", color: "#111" }}>
-            Explore NYC
+          <Link href="/new-york/one-world-observatory" style={{ textDecoration: "none", color: "#111", fontWeight: 500 }}>
+            Explore New York
           </Link>
         </div>
       </header>
@@ -53,9 +53,9 @@ export default function Home() {
       <section
         style={{
           position: "relative",
-          height: "70vh",
+          height: "72vh",
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1549640364-6f7b43bfbac4?q=80&w=2070&auto=format&fit=crop')",
+            "url('https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=2070&auto=format&fit=crop')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -65,7 +65,7 @@ export default function Home() {
             position: "absolute",
             inset: 0,
             background:
-              "linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.6))",
+              "linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.55))",
           }}
         />
 
@@ -78,11 +78,12 @@ export default function Home() {
             color: "white",
           }}
         >
-          <h1 style={{ fontSize: "64px", maxWidth: "720px", lineHeight: 1.05 }}>
+          <h1 style={{ fontSize: "64px", maxWidth: "760px", lineHeight: 1.05 }}>
             See more. Spend less.
           </h1>
-          <p style={{ fontSize: "20px", maxWidth: "600px", marginTop: "16px", color: "#f3f4f6" }}>
-            TripSage helps you find the best-value tickets for top attractions and shows — without the overwhelm.
+          <p style={{ fontSize: "20px", maxWidth: "620px", marginTop: "16px", color: "#f3f4f6" }}>
+            TripSage helps you find the best-value tickets for top attractions and shows —
+            based on what matters to you.
           </p>
 
           <Link
@@ -90,7 +91,7 @@ export default function Home() {
             style={{
               display: "inline-block",
               marginTop: "28px",
-              background: "#ff385c",
+              background: "#ff5a5f",
               padding: "14px 22px",
               borderRadius: "999px",
               color: "white",
@@ -98,7 +99,7 @@ export default function Home() {
               fontWeight: 600,
             }}
           >
-            Start exploring
+            Start exploring New York
           </Link>
         </div>
       </section>
@@ -106,7 +107,7 @@ export default function Home() {
       {/* City section */}
       <section style={{ padding: "80px 24px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <h2 style={{ fontSize: "36px", marginBottom: "24px" }}>Explore New York City</h2>
+          <h2 style={{ fontSize: "34px", marginBottom: "24px" }}>New York City</h2>
 
           <div
             style={{
@@ -132,7 +133,7 @@ export default function Home() {
             />
             <AttractionCard
               title="SUMMIT One Vanderbilt"
-              image="https://images.unsplash.com/photo-1643214853479-7a4e2d8b1c3b?q=80&w=1932&auto=format&fit=crop"
+              image="https://images.unsplash.com/photo-1684500038750-29fa8b9a2b5b?q=80&w=1932&auto=format&fit=crop"
               href="/new-york/summit-one-vanderbilt"
             />
             <AttractionCard
@@ -141,6 +142,17 @@ export default function Home() {
               href="/new-york/statue-of-liberty"
             />
           </div>
+        </div>
+      </section>
+
+      {/* Trust */}
+      <section style={{ padding: "80px 24px", background: "#fafafa" }}>
+        <div style={{ maxWidth: "900px", margin: "0 auto", textAlign: "center" }}>
+          <h3 style={{ fontSize: "28px", marginBottom: "12px" }}>Why TripSage?</h3>
+          <p style={{ color: "#555" }}>
+            We compare tickets across trusted providers and surface the best options for different travel situations —
+            value, flexibility, and last-minute availability. No clutter. No pressure.
+          </p>
         </div>
       </section>
 
@@ -167,7 +179,7 @@ function AttractionCard({
     <Link href={href} style={{ textDecoration: "none" }}>
       <div
         style={{
-          borderRadius: "18px",
+          borderRadius: "20px",
           overflow: "hidden",
           boxShadow: "0 12px 28px rgba(0,0,0,0.12)",
           transition: "transform 0.15s ease",
@@ -176,7 +188,7 @@ function AttractionCard({
       >
         <div
           style={{
-            height: "180px",
+            height: "190px",
             backgroundImage: `url('${image}')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
@@ -184,7 +196,7 @@ function AttractionCard({
         />
         <div style={{ padding: "16px" }}>
           <h3 style={{ fontSize: "18px", color: "#111", marginBottom: "4px" }}>{title}</h3>
-          <p style={{ fontSize: "14px", color: "#666" }}>Compare tickets</p>
+          <p style={{ fontSize: "14px", color: "#666" }}>Compare ticket options</p>
         </div>
       </div>
     </Link>
