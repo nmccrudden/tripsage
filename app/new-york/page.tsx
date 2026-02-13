@@ -109,11 +109,6 @@ export default function NewYork() {
             </Link>
           ))}
         </div>
-
-        {/* Disclosure */}
-        <p style={{ marginTop: "48px", fontSize: "12px", color: "#777" }}>
-          TripSage may earn a small commission if you book through our links, at no extra cost to you.
-        </p>
       </section>
     </main>
   );
