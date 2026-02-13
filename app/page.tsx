@@ -69,7 +69,7 @@ export default function Home() {
           </h1>
 
           <p style={{ fontSize: "20px", maxWidth: "520px", marginTop: "24px", opacity: 0.95 }}>
-            Find the best-value tickets for New York’s top attractions — without the overwhelm.
+            Find the best-value tickets for New York’s top attractions — with minimal fuss.
           </p>
 
           <Link
