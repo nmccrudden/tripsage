@@ -55,7 +55,7 @@ export default function Home() {
           position: "relative",
           height: "72vh",
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=2070&auto=format&fit=crop')",
+            "url('https://cdn.britannica.com/61/93061-050-99147DCE/Statue-of-Liberty-Island-New-York-Bay.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -64,8 +64,7 @@ export default function Home() {
           style={{
             position: "absolute",
             inset: 0,
-            background:
-              "linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.55))",
+            background: "linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.65))",
           }}
         />
 
@@ -82,8 +81,7 @@ export default function Home() {
             See more. Spend less.
           </h1>
           <p style={{ fontSize: "20px", maxWidth: "620px", marginTop: "16px", color: "#f3f4f6" }}>
-            TripSage helps you find the best-value tickets for top attractions and shows —
-            based on what matters to you.
+            Find the best-value tickets for New York’s top attractions — without the overwhelm.
           </p>
 
           <Link
@@ -117,42 +115,31 @@ export default function Home() {
             }}
           >
             <AttractionCard
+              title="One Vanderbilt (SUMMIT)"
+              image="https://s3.amazonaws.com/hines-images/one-vanderbilt/SLGreen_OneVanderbiltAve_05_ChrystlerAerial_082515_hres_web.jpg"
+              href="/new-york/summit-one-vanderbilt"
+            />
+            <AttractionCard
+              title="Empire State Building"
+              image="https://cdn.britannica.com/73/114973-050-2DC46083/Midtown-Manhattan-Empire-State-Building-New-York.jpg"
+              href="/new-york/empire-state-building"
+            />
+            <AttractionCard
               title="One World Observatory"
-              image="https://images.unsplash.com/photo-1545156521-77bd85671d30?q=80&w=1932&auto=format&fit=crop"
+              image="https://media.cntraveler.com/photos/53e2ea84dddaa35c30f643ad/master/pass/one-world-observatory.jpg"
               href="/new-york/one-world-observatory"
             />
             <AttractionCard
               title="Top of the Rock"
-              image="https://images.unsplash.com/photo-1522083165195-3424ed129620?q=80&w=1932&auto=format&fit=crop"
+              image="https://images.rove.me/w_1920%2Cq_85/ippbg9nihky4ojskja8l/new-york-top-of-the-rock.jpg"
               href="/new-york/top-of-the-rock"
             />
             <AttractionCard
-              title="Empire State Building"
-              image="https://images.unsplash.com/photo-1545259741-2ea3ebf61fa3?q=80&w=1932&auto=format&fit=crop"
-              href="/new-york/empire-state-building"
-            />
-            <AttractionCard
-              title="SUMMIT One Vanderbilt"
-              image="https://images.unsplash.com/photo-1643214853479-7a4e2d8b1c3b?q=80&w=1932&auto=format&fit=crop"
-              href="/new-york/summit-one-vanderbilt"
-            />
-            <AttractionCard
               title="Statue of Liberty"
-              image="https://images.unsplash.com/photo-1562004760-aceed7bb0fe3?q=80&w=1932&auto=format&fit=crop"
+              image="https://cdn.britannica.com/61/93061-050-99147DCE/Statue-of-Liberty-Island-New-York-Bay.jpg"
               href="/new-york/statue-of-liberty"
             />
           </div>
-        </div>
-      </section>
-
-      {/* Trust */}
-      <section style={{ padding: "80px 24px", background: "#fafafa" }}>
-        <div style={{ maxWidth: "900px", margin: "0 auto", textAlign: "center" }}>
-          <h3 style={{ fontSize: "28px", marginBottom: "12px" }}>Why TripSage?</h3>
-          <p style={{ color: "#555" }}>
-            We compare tickets across trusted providers and surface the best options for different travel situations —
-            value, flexibility, and last-minute availability. No clutter. No pressure.
-          </p>
         </div>
       </section>
 
@@ -182,7 +169,6 @@ function AttractionCard({
           borderRadius: "20px",
           overflow: "hidden",
           boxShadow: "0 12px 28px rgba(0,0,0,0.12)",
-          transition: "transform 0.15s ease",
           background: "white",
         }}
       >
