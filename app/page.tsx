@@ -8,7 +8,7 @@ export default function Home() {
         style={{
           minHeight: "90vh",
           backgroundImage:
-            "url(https://images.unsplash.com/photo-1542222024-c39e2281f121?q=80&w=2400&auto=format&fit=crop)",
+            "url(https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?q=80&w=2400&auto=format&fit=crop)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           position: "relative",
@@ -21,7 +21,7 @@ export default function Home() {
             position: "absolute",
             inset: 0,
             background:
-              "linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.75))",
+              "linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.7))",
           }}
         />
 
@@ -36,9 +36,9 @@ export default function Home() {
         >
           <h1
             style={{
-              fontSize: "clamp(42px, 6vw, 72px)",
+              fontSize: "clamp(44px, 6vw, 76px)",
               lineHeight: 1.05,
-              maxWidth: "720px",
+              maxWidth: "760px",
               marginBottom: "16px",
             }}
           >
@@ -50,7 +50,7 @@ export default function Home() {
           <p
             style={{
               fontSize: "20px",
-              maxWidth: "520px",
+              maxWidth: "560px",
               opacity: 0.95,
             }}
           >
@@ -62,7 +62,7 @@ export default function Home() {
             <Link
               href="/new-york"
               style={{
-                padding: "14px 22px",
+                padding: "14px 24px",
                 background: "white",
                 color: "#111",
                 borderRadius: "999px",
@@ -76,8 +76,8 @@ export default function Home() {
             <Link
               href="/about"
               style={{
-                padding: "14px 22px",
-                border: "1px solid rgba(255,255,255,0.6)",
+                padding: "14px 24px",
+                border: "1px solid rgba(255,255,255,0.7)",
                 color: "white",
                 borderRadius: "999px",
                 textDecoration: "none",
@@ -91,7 +91,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FEATURED GRID */}
+      {/* FEATURED */}
       <section style={{ background: "#fff" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "96px 24px" }}>
           <h2 style={{ fontSize: "40px", marginBottom: "32px" }}>
@@ -140,7 +140,7 @@ export default function Home() {
                   borderRadius: "20px",
                   overflow: "hidden",
                   background: "white",
-                  boxShadow: "0 20px 40px rgba(0,0,0,0.12)",
+                  boxShadow: "0 18px 40px rgba(0,0,0,0.12)",
                   transition: "transform 0.2s ease, box-shadow 0.2s ease",
                 }}
               >
@@ -157,41 +157,6 @@ export default function Home() {
                 </div>
               </Link>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* TRUST STRIP */}
-      <section style={{ background: "#fafafa" }}>
-        <div
-          style={{
-            maxWidth: "1200px",
-            margin: "0 auto",
-            padding: "96px 24px",
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-            gap: "32px",
-          }}
-        >
-          <div>
-            <h3>Trusted platforms only</h3>
-            <p style={{ color: "#555" }}>
-              We link to established booking sites — no shady resellers.
-            </p>
-          </div>
-
-          <div>
-            <h3>No sponsored rankings</h3>
-            <p style={{ color: "#555" }}>
-              We don’t sell placements. Rankings are based on value and flexibility.
-            </p>
-          </div>
-
-          <div>
-            <h3>Built for real travelers</h3>
-            <p style={{ color: "#555" }}>
-              Designed to save time and avoid overpaying.
-            </p>
           </div>
         </div>
       </section>

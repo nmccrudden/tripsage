@@ -3,8 +3,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "TripSage — See more. Spend less.",
-  description:
-    "Compare the best attraction tickets so you can book confidently with minimal fuss.",
+  description: "Compare the best attraction tickets and avoid overpaying.",
 };
 
 export default function RootLayout({
@@ -14,21 +13,23 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body style={{ margin: 0, fontFamily: "system-ui, -apple-system, BlinkMacSystemFont, sans-serif" }}>
+      <body style={{ margin: 0, fontFamily: "system-ui, -apple-system, sans-serif" }}>
         <header
           style={{
-            borderBottom: "1px solid #eee",
-            background: "white",
-            position: "sticky",
+            position: "fixed",
             top: 0,
+            left: 0,
+            right: 0,
             zIndex: 50,
+            background: "rgba(0,0,0,0.35)",
+            backdropFilter: "blur(10px)",
           }}
         >
           <div
             style={{
               maxWidth: "1200px",
               margin: "0 auto",
-              padding: "16px 20px",
+              padding: "14px 24px",
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
@@ -38,26 +39,27 @@ export default function RootLayout({
               href="/"
               style={{
                 fontWeight: 800,
-                fontSize: "22px",
+                fontSize: "20px",
+                color: "white",
                 textDecoration: "none",
-                color: "#111",
+                letterSpacing: "-0.02em",
               }}
             >
               TripSage
             </Link>
 
-            <nav style={{ display: "flex", gap: "16px" }}>
-              <Link href="/new-york" style={{ textDecoration: "none", color: "#333" }}>
+            <nav style={{ display: "flex", gap: "18px" }}>
+              <Link href="/new-york" style={{ color: "white", textDecoration: "none" }}>
                 New York
               </Link>
-              <Link href="/about" style={{ textDecoration: "none", color: "#333" }}>
+              <Link href="/about" style={{ color: "white", textDecoration: "none" }}>
                 About
               </Link>
             </nav>
           </div>
         </header>
 
-        {children}
+        <div style={{ paddingTop: "64px" }}>{children}</div>
       </body>
     </html>
   );
