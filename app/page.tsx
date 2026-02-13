@@ -1,97 +1,108 @@
 import Link from "next/link";
 
-export const metadata = {
-  title: "TripSage — See more. Spend less.",
-  description:
-    "Compare the best-value tickets for New York’s top attractions. Find the cheapest, refundable, and last-minute options with minimal fuss.",
-};
-
 export default function Home() {
   return (
-    <main style={{ fontFamily: "system-ui", color: "#111" }}>
+    <main>
       {/* Hero */}
       <section
         style={{
           minHeight: "85vh",
           backgroundImage:
-            "url(https://cdn.britannica.com/73/114973-050-2DC46083/Midtown-Manhattan-Empire-State-Building-New-York.jpg)",
+            "url(https://images.unsplash.com/photo-1549921296-3a6b5c90b7c8?q=80&w=2000&auto=format&fit=crop)",
           backgroundSize: "cover",
           backgroundPosition: "center",
+          position: "relative",
           display: "flex",
           alignItems: "center",
         }}
       >
         <div
           style={{
+            position: "absolute",
+            inset: 0,
+            background: "rgba(0,0,0,0.5)",
+          }}
+        />
+
+        <div
+          style={{
+            position: "relative",
             maxWidth: "1200px",
             margin: "0 auto",
             padding: "120px 24px",
             color: "white",
-            background: "rgba(0,0,0,0.55)",
           }}
         >
-          <h1 style={{ fontSize: "72px", lineHeight: 1.02 }}>
-            See more.<br />Spend less.
+          <h1 style={{ fontSize: "60px", maxWidth: "760px", lineHeight: 1.1 }}>
+            See more. Spend less.
           </h1>
 
-          <p style={{ fontSize: "20px", maxWidth: "560px", marginTop: "24px" }}>
-            Compare the best-value tickets for New York’s top attractions — with minimal fuss.
+          <p style={{ fontSize: "20px", maxWidth: "560px", marginTop: "20px", opacity: 0.95 }}>
+            TripSage compares the best attraction tickets so you can book confidently — with minimal fuss.
           </p>
 
-          <Link
-            href="/new-york"
-            style={{
-              display: "inline-block",
-              marginTop: "36px",
-              padding: "14px 24px",
-              background: "white",
-              color: "#111",
-              borderRadius: "999px",
-              textDecoration: "none",
-              fontWeight: 600,
-              fontSize: "15px",
-            }}
-          >
-            Explore New York attractions
-          </Link>
+          <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", marginTop: "32px" }}>
+            <Link
+              href="/new-york"
+              style={{
+                padding: "14px 22px",
+                background: "white",
+                color: "#111",
+                borderRadius: "12px",
+                textDecoration: "none",
+                fontWeight: 600,
+              }}
+            >
+              Explore New York attractions
+            </Link>
+
+            <Link
+              href="/trust"
+              style={{
+                padding: "14px 22px",
+                border: "1px solid white",
+                color: "white",
+                borderRadius: "12px",
+                textDecoration: "none",
+                fontWeight: 600,
+              }}
+            >
+              Why trust TripSage?
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* Trust Signals */}
-      <section style={{ maxWidth: "1200px", margin: "0 auto", padding: "80px 24px" }}>
-        <h2 style={{ fontSize: "36px", marginBottom: "32px" }}>
-          Why travelers use TripSage
-        </h2>
+      <section
+        style={{
+          maxWidth: "1200px",
+          margin: "0 auto",
+          padding: "80px 24px",
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+          gap: "32px",
+        }}
+      >
+        <div>
+          <h3>Unbiased comparisons</h3>
+          <p style={{ color: "#555" }}>
+            No sponsored rankings. We compare prices, flexibility, and availability across trusted platforms.
+          </p>
+        </div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-            gap: "32px",
-          }}
-        >
-          <div>
-            <h3 style={{ fontSize: "20px", marginBottom: "8px" }}>Best value, not sponsored</h3>
-            <p style={{ color: "#555" }}>
-              We highlight the best-value tickets based on price, flexibility, and availability —
-              not paid placements.
-            </p>
-          </div>
+        <div>
+          <h3>Built for travelers</h3>
+          <p style={{ color: "#555" }}>
+            Designed to save you time and help you book confidently.
+          </p>
+        </div>
 
-          <div>
-            <h3 style={{ fontSize: "20px", marginBottom: "8px" }}>Trusted booking partners</h3>
-            <p style={{ color: "#555" }}>
-              We link to well-known ticket platforms used by millions of travelers worldwide.
-            </p>
-          </div>
-
-          <div>
-            <h3 style={{ fontSize: "20px", marginBottom: "8px" }}>Designed for real trips</h3>
-            <p style={{ color: "#555" }}>
-              Whether you’re booking ahead or last minute, TripSage helps you find the best option
-              for your situation.
-            </p>
-          </div>
+        <div>
+          <h3>Transparent commissions</h3>
+          <p style={{ color: "#555" }}>
+            We may earn a small commission — at no extra cost to you.
+          </p>
         </div>
       </section>
     </main>
