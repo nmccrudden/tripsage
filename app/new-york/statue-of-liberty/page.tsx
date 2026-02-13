@@ -1,64 +1,76 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 
-export const metadata = {
-  title: "Best Statue of Liberty Tickets (2026) — TripSage",
+export const metadata: Metadata = {
+  title: "Statue of Liberty Tickets (Best Deals & Skip-the-Line) | TripSage",
   description:
-    "Compare the cheapest, refundable, and last-minute Statue of Liberty tickets. Find the best-value option with minimal fuss.",
+    "Compare Statue of Liberty ticket prices, skip-the-line access, and refundable options. Find the best deal and avoid overpaying with TripSage.",
 };
 
-export default function StatueOfLiberty() {
+export default function StatueOfLibertyPage() {
   return (
-    <main style={{ fontFamily: "system-ui", color: "#111" }}>
-      <section
-        style={{
-          minHeight: "70vh",
-          backgroundImage:
-            "url(https://cdn.britannica.com/61/93061-050-99147DCE/Statue-of-Liberty-Island-New-York-Bay.jpg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          position: "relative",
-          display: "flex",
-          alignItems: "center",
-        }}
-      >
-        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,0.7), rgba(0,0,0,0.35))" }} />
+    <main style={{ maxWidth: "1100px", margin: "0 auto", padding: "60px 24px", fontFamily: "system-ui" }}>
+      <Link href="/new-york" style={{ textDecoration: "none", color: "#555" }}>
+        ← Back to New York attractions
+      </Link>
 
-        <div style={{ position: "relative", maxWidth: "1200px", margin: "0 auto", padding: "140px 24px 80px", color: "white" }}>
-          <Link href="/new-york" style={{ color: "white", textDecoration: "none", fontSize: "14px" }}>
-            ← Back to New York
-          </Link>
+      <h1 style={{ fontSize: "42px", marginTop: "16px" }}>
+        Statue of Liberty Tickets – Compare the Best Deals
+      </h1>
 
-          <h1 style={{ fontSize: "52px", marginTop: "16px" }}>Statue of Liberty tickets</h1>
-          <p style={{ fontSize: "20px", maxWidth: "560px", marginTop: "16px", opacity: 0.95 }}>
-            Compare the best-value tickets for the Statue of Liberty — with minimal fuss.
-          </p>
+      <p style={{ fontSize: "18px", color: "#555", maxWidth: "720px", marginTop: "12px" }}>
+        Find the best Statue of Liberty tickets by comparing trusted platforms for price, flexibility,
+        and last-minute availability — with minimal fuss.
+      </p>
+
+      <section style={{ marginTop: "48px", display: "grid", gap: "20px" }}>
+        <div style={cardStyle}>
+          <h3>Best value ticket</h3>
+          <p>Reliable ferry and entry access at the lowest typical price.</p>
+          <a href="/out/statue-of-liberty" style={buttonStyle} target="_blank" rel="noopener noreferrer">
+            View best deal
+          </a>
+        </div>
+
+        <div style={cardStyle}>
+          <h3>Refundable ticket</h3>
+          <p>Free cancellation if your plans change.</p>
+          <a href="/out/statue-of-liberty" style={buttonStyle} target="_blank" rel="noopener noreferrer">
+            View refundable option
+          </a>
+        </div>
+
+        <div style={cardStyle}>
+          <h3>Last-minute tickets</h3>
+          <p>Available today or tomorrow with instant confirmation.</p>
+          <a href="/out/statue-of-liberty" style={buttonStyle} target="_blank" rel="noopener noreferrer">
+            View last-minute availability
+          </a>
         </div>
       </section>
 
-      <section style={{ maxWidth: "1200px", margin: "0 auto", padding: "80px 24px" }}>
-        <h2 style={{ fontSize: "32px", marginBottom: "24px" }}>Best options right now</h2>
-
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "24px" }}>
-          {["View best deal", "View refundable ticket", "View last-minute options"].map((label) => (
-            <div key={label} style={{ border: "1px solid #eee", borderRadius: "18px", padding: "24px", background: "white", boxShadow: "0 12px 30px rgba(0,0,0,0.06)" }}>
-              <h3>{label.replace("View ", "").replace(" options", "")}</h3>
-              <p style={{ color: "#555" }}>Compare current availability and pricing from trusted platforms.</p>
-              <a
-                href="https://www.getyourguide.com/new-york-city-l59/statue-of-liberty-ellis-island-t154/?partner_id=UXBBWLN&utm_medium=online_publisher"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ display: "inline-block", marginTop: "12px", padding: "12px 18px", borderRadius: "999px", background: "#111", color: "white", textDecoration: "none", fontWeight: 600, fontSize: "14px" }}
-              >
-                {label}
-              </a>
-            </div>
-          ))}
-        </div>
-
-        <p style={{ marginTop: "32px", fontSize: "14px", color: "#666" }}>
-          We compare prices across trusted booking platforms. Rankings aren’t sponsored.
-        </p>
-      </section>
+      <p style={{ marginTop: "48px", fontSize: "12px", color: "#777" }}>
+        TripSage may earn a small commission if you book through our links, at no extra cost to you.
+      </p>
     </main>
   );
 }
+
+const cardStyle: React.CSSProperties = {
+  border: "1px solid #eee",
+  borderRadius: "16px",
+  padding: "20px",
+  background: "white",
+  boxShadow: "0 10px 24px rgba(0,0,0,0.06)",
+};
+
+const buttonStyle: React.CSSProperties = {
+  display: "inline-block",
+  marginTop: "12px",
+  padding: "12px 16px",
+  borderRadius: "12px",
+  background: "#111",
+  color: "white",
+  textDecoration: "none",
+  fontWeight: 600,
+};
