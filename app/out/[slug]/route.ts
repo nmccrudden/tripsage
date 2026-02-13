@@ -18,5 +18,5 @@ export async function GET(
     return NextResponse.redirect(new URL("/", "https://tripsage.app"));
   }
 
-  return NextResponse.redirect(url);
+  return NextResponse.redirect(new URL(url));
 }
