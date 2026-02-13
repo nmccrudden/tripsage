@@ -6,11 +6,19 @@ export const metadata = {
 
 export default function About() {
   return (
-    <main style={{ fontFamily: "system-ui", color: "#111", maxWidth: "900px", margin: "0 auto", padding: "120px 24px 80px" }}>
+    <main
+      style={{
+        fontFamily: "system-ui",
+        color: "#111",
+        maxWidth: "900px",
+        margin: "0 auto",
+        padding: "120px 24px 80px",
+      }}
+    >
       <h1 style={{ fontSize: "48px", marginBottom: "16px" }}>About TripSage</h1>
 
       <p style={{ fontSize: "18px", color: "#444", lineHeight: 1.6 }}>
-        TripSage helps travelers find the best-value tickets for popular attractions and shows — without the overwhelm.
+        TripSage helps travelers find the best-value tickets for popular attractions and shows — with minimal fuss.
         We focus on what actually matters when you’re booking: price, flexibility, and availability.
       </p>
 
@@ -31,7 +39,7 @@ export default function About() {
       <ul style={{ fontSize: "17px", color: "#444", lineHeight: 1.7 }}>
         <li>No sponsored rankings</li>
         <li>Transparent affiliate disclosure</li>
-        <li>Built for real trip planning, not comparison overload</li>
+        <li>Built for real trip planning</li>
       </ul>
 
       <p style={{ marginTop: "48px", color: "#777", fontSize: "14px" }}>
