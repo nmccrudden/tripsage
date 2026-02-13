@@ -91,7 +91,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FEATURED */}
+      {/* FEATURED ATTRACTIONS */}
       <section style={{ background: "#fff" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "96px 24px" }}>
           <h2 style={{ fontSize: "40px", marginBottom: "32px" }}>
@@ -106,6 +106,12 @@ export default function Home() {
             }}
           >
             {[
+              {
+                title: "Statue of Liberty",
+                image:
+                  "https://cdn.britannica.com/61/93061-050-99147DCE/Statue-of-Liberty-Island-New-York-Bay.jpg",
+                href: "/new-york/statue-of-liberty",
+              },
               {
                 title: "One World Observatory",
                 image:
