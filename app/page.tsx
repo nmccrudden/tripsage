@@ -3,10 +3,40 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main style={{ fontFamily: "system-ui", color: "#111" }}>
+      {/* Header */}
+      <header
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 10,
+          padding: "24px",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          maxWidth: "1200px",
+          margin: "0 auto",
+          color: "white",
+        }}
+      >
+        <Link href="/" style={{ textDecoration: "none", color: "white" }}>
+          <strong style={{ fontSize: "22px", letterSpacing: "0.5px" }}>
+            TripSage
+          </strong>
+        </Link>
+
+        <nav style={{ display: "flex", gap: "20px" }}>
+          <Link href="/new-york" style={{ color: "white", textDecoration: "none" }}>
+            New York
+          </Link>
+        </nav>
+      </header>
+
       {/* Hero */}
       <section
         style={{
-          minHeight: "85vh",
+          minHeight: "90vh",
           backgroundImage:
             "url(https://cdn.britannica.com/73/114973-050-2DC46083/Midtown-Manhattan-Empire-State-Building-New-York.jpg)",
           backgroundSize: "cover",
@@ -20,7 +50,7 @@ export default function Home() {
           style={{
             position: "absolute",
             inset: 0,
-            background: "linear-gradient(180deg, rgba(0,0,0,0.65), rgba(0,0,0,0.35))",
+            background: "linear-gradient(180deg, rgba(0,0,0,0.7), rgba(0,0,0,0.35))",
           }}
         />
 
@@ -29,11 +59,11 @@ export default function Home() {
             position: "relative",
             maxWidth: "1200px",
             margin: "0 auto",
-            padding: "120px 24px",
+            padding: "140px 24px 120px",
             color: "white",
           }}
         >
-          <h1 style={{ fontSize: "56px", maxWidth: "700px", lineHeight: 1.1 }}>
+          <h1 style={{ fontSize: "56px", maxWidth: "720px", lineHeight: 1.1 }}>
             See New York’s best attractions — without overpaying
           </h1>
 
@@ -108,6 +138,12 @@ export default function Home() {
             }}
           >
             {[
+              {
+                title: "SUMMIT One Vanderbilt",
+                image:
+                  "https://s3.amazonaws.com/hines-images/one-vanderbilt/SLGreen_OneVanderbiltAve_05_ChrystlerAerial_082515_hres_web.jpg",
+                href: "/new-york/summit-one-vanderbilt",
+              },
               {
                 title: "One World Observatory",
                 image:
