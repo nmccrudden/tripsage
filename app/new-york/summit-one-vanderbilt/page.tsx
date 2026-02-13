@@ -1,14 +1,19 @@
 import Link from "next/link";
 
-export default function SummitOneVanderbilt() {
+export default function TopOfTheRock() {
   return (
     <main style={{ padding: "60px 24px", fontFamily: "system-ui", maxWidth: "900px", margin: "0 auto" }}>
-      <Link href="/" style={{ textDecoration: "none", color: "#555" }}>← Back to New York</Link>
+      <Link href="/" style={{ textDecoration: "none", color: "#555" }}>
+        ← Back to New York
+      </Link>
 
-      <h1 style={{ fontSize: "42px", marginTop: "16px" }}>SUMMIT One Vanderbilt Tickets</h1>
+      <h1 style={{ fontSize: "42px", marginTop: "16px" }}>
+        Top of the Rock Tickets
+      </h1>
 
       <p style={{ fontSize: "18px", color: "#555", maxWidth: "700px" }}>
-        TripSage compares SUMMIT One Vanderbilt ticket options based on price, flexibility, and last-minute availability.
+        TripSage compares ticket options for Top of the Rock based on what matters to you —
+        price, flexibility, and how late you’re booking.
       </p>
 
       <div style={{ display: "grid", gap: "20px", marginTop: "40px" }}>
@@ -16,7 +21,7 @@ export default function SummitOneVanderbilt() {
           <h3>🏆 Best Value Overall</h3>
           <p>Cheapest reliable ticket with no unnecessary extras.</p>
           <a
-            href="PASTE_SUMMIT_AFFILIATE_LINK_HERE"
+            href="https://www.getyourguide.com/new-york-city-l59/top-of-the-rock-observation-deck-ticket-t38686/?partner_id=UXBBWLN&utm_medium=online_publisher"
             target="_blank"
             rel="noopener noreferrer"
             style={{ ...buttonStyle, display: "inline-block", textDecoration: "none", textAlign: "center" }}
@@ -27,14 +32,14 @@ export default function SummitOneVanderbilt() {
 
         <div style={cardStyle}>
           <h3>🔁 Best Refundable Option</h3>
-          <p>Flexible ticket with free cancellation.</p>
-          <button style={buttonStyle}>View refundable ticket</button>
+          <p>Flexible ticket with free cancellation if plans change.</p>
+          <button style={buttonStyle}>Coming soon</button>
         </div>
 
         <div style={cardStyle}>
           <h3>⏱ Best for Late Planners</h3>
           <p>Available today or tomorrow with instant confirmation.</p>
-          <button style={buttonStyle}>View last-minute options</button>
+          <button style={buttonStyle}>Coming soon</button>
         </div>
       </div>
 
