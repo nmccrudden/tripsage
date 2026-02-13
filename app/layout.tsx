@@ -13,16 +13,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body style={{ margin: 0, fontFamily: "system-ui, -apple-system, sans-serif" }}>
+      <body style={{ margin: 0, fontFamily: "system-ui, -apple-system, BlinkMacSystemFont, sans-serif" }}>
         <header
           style={{
-            position: "fixed",
+            background: "white",
+            borderBottom: "1px solid #eee",
+            position: "sticky",
             top: 0,
-            left: 0,
-            right: 0,
-            zIndex: 50,
-            background: "rgba(0,0,0,0.35)",
-            backdropFilter: "blur(10px)",
+            zIndex: 100,
           }}
         >
           <div
@@ -39,8 +37,8 @@ export default function RootLayout({
               href="/"
               style={{
                 fontWeight: 800,
-                fontSize: "20px",
-                color: "white",
+                fontSize: "22px",
+                color: "#111",
                 textDecoration: "none",
                 letterSpacing: "-0.02em",
               }}
@@ -48,11 +46,11 @@ export default function RootLayout({
               TripSage
             </Link>
 
-            <nav style={{ display: "flex", gap: "18px" }}>
-              <Link href="/new-york" style={{ color: "white", textDecoration: "none" }}>
+            <nav style={{ display: "flex", gap: "20px" }}>
+              <Link href="/new-york" style={{ color: "#333", textDecoration: "none" }}>
                 New York
               </Link>
-              <Link href="/about" style={{ color: "white", textDecoration: "none" }}>
+              <Link href="/about" style={{ color: "#333", textDecoration: "none" }}>
                 About
               </Link>
             </nav>
