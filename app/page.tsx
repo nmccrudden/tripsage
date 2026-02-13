@@ -12,22 +12,22 @@ export default function Home() {
           right: 0,
           zIndex: 10,
           padding: "24px",
+          maxWidth: "1200px",
+          margin: "0 auto",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          maxWidth: "1200px",
-          margin: "0 auto",
           color: "white",
         }}
       >
         <Link href="/" style={{ textDecoration: "none", color: "white" }}>
-          <strong style={{ fontSize: "22px", letterSpacing: "0.5px" }}>
+          <strong style={{ fontSize: "22px", letterSpacing: "0.4px" }}>
             TripSage
           </strong>
         </Link>
 
-        <nav style={{ display: "flex", gap: "20px" }}>
-          <Link href="/new-york" style={{ color: "white", textDecoration: "none" }}>
+        <nav>
+          <Link href="/new-york" style={{ color: "white", textDecoration: "none", fontSize: "14px" }}>
             New York
           </Link>
         </nav>
@@ -36,7 +36,7 @@ export default function Home() {
       {/* Hero */}
       <section
         style={{
-          minHeight: "90vh",
+          minHeight: "95vh",
           backgroundImage:
             "url(https://cdn.britannica.com/73/114973-050-2DC46083/Midtown-Manhattan-Empire-State-Building-New-York.jpg)",
           backgroundSize: "cover",
@@ -50,7 +50,7 @@ export default function Home() {
           style={{
             position: "absolute",
             inset: 0,
-            background: "linear-gradient(180deg, rgba(0,0,0,0.7), rgba(0,0,0,0.35))",
+            background: "linear-gradient(180deg, rgba(0,0,0,0.75), rgba(0,0,0,0.35))",
           }}
         />
 
@@ -59,30 +59,31 @@ export default function Home() {
             position: "relative",
             maxWidth: "1200px",
             margin: "0 auto",
-            padding: "140px 24px 120px",
+            padding: "160px 24px 120px",
             color: "white",
+            textAlign: "left",
           }}
         >
-          <h1 style={{ fontSize: "56px", maxWidth: "720px", lineHeight: 1.1 }}>
-            See New York’s best attractions — without overpaying
+          <h1 style={{ fontSize: "72px", maxWidth: "700px", lineHeight: 1.02 }}>
+            See more.<br />Spend less.
           </h1>
 
-          <p style={{ fontSize: "20px", maxWidth: "520px", marginTop: "20px", opacity: 0.95 }}>
-            TripSage compares real ticket options so you can book smarter, skip the stress,
-            and get the most from your trip.
+          <p style={{ fontSize: "20px", maxWidth: "520px", marginTop: "24px", opacity: 0.95 }}>
+            Find the best-value tickets for New York’s top attractions — without the overwhelm.
           </p>
 
           <Link
             href="/new-york"
             style={{
               display: "inline-block",
-              marginTop: "28px",
-              padding: "14px 22px",
+              marginTop: "36px",
+              padding: "14px 24px",
               background: "white",
               color: "#111",
-              borderRadius: "12px",
+              borderRadius: "999px",
               textDecoration: "none",
               fontWeight: 600,
+              fontSize: "15px",
             }}
           >
             Explore New York attractions
@@ -95,7 +96,7 @@ export default function Home() {
         style={{
           maxWidth: "1200px",
           margin: "0 auto",
-          padding: "80px 24px",
+          padding: "96px 24px 72px",
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
           gap: "32px",
@@ -124,7 +125,7 @@ export default function Home() {
       </section>
 
       {/* Featured Attractions */}
-      <section style={{ background: "#fafafa", padding: "80px 24px" }}>
+      <section style={{ background: "#fafafa", padding: "88px 24px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <h2 style={{ fontSize: "36px", marginBottom: "32px" }}>
             Popular New York attractions
