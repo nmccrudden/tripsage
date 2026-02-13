@@ -54,6 +54,10 @@ export default function StatueOfLiberty() {
             </div>
           ))}
         </div>
+
+        <p style={{ marginTop: "32px", fontSize: "14px", color: "#666" }}>
+          We compare prices across trusted booking platforms. Rankings aren’t sponsored.
+        </p>
       </section>
     </main>
   );
