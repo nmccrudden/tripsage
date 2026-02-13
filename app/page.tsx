@@ -6,9 +6,9 @@ export default function Home() {
       {/* HERO */}
       <section
         style={{
-          minHeight: "85vh",
+          minHeight: "90vh",
           backgroundImage:
-            "url(https://images.unsplash.com/photo-1549921296-3a6b5c90b7c8?q=80&w=2000&auto=format&fit=crop)",
+            "url(https://images.unsplash.com/photo-1542222024-c39e2281f121?q=80&w=2400&auto=format&fit=crop)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           position: "relative",
@@ -20,7 +20,8 @@ export default function Home() {
           style={{
             position: "absolute",
             inset: 0,
-            background: "linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.65))",
+            background:
+              "linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.75))",
           }}
         />
 
@@ -33,12 +34,28 @@ export default function Home() {
             color: "white",
           }}
         >
-          <h1 style={{ fontSize: "clamp(36px, 6vw, 64px)", maxWidth: "700px", lineHeight: 1.1 }}>
-            See more. <br /> Spend less.
+          <h1
+            style={{
+              fontSize: "clamp(42px, 6vw, 72px)",
+              lineHeight: 1.05,
+              maxWidth: "720px",
+              marginBottom: "16px",
+            }}
+          >
+            See more.
+            <br />
+            Spend less.
           </h1>
 
-          <p style={{ fontSize: "20px", maxWidth: "520px", marginTop: "16px", opacity: 0.95 }}>
-            TripSage compares the best attraction tickets so you can book confidently — with minimal fuss.
+          <p
+            style={{
+              fontSize: "20px",
+              maxWidth: "520px",
+              opacity: 0.95,
+            }}
+          >
+            Compare the best attraction tickets so you can book confidently — with
+            minimal fuss.
           </p>
 
           <div style={{ display: "flex", gap: "12px", marginTop: "28px", flexWrap: "wrap" }}>
@@ -48,23 +65,24 @@ export default function Home() {
                 padding: "14px 22px",
                 background: "white",
                 color: "#111",
-                borderRadius: "12px",
+                borderRadius: "999px",
                 textDecoration: "none",
                 fontWeight: 600,
               }}
             >
-              Explore New York attractions
+              Explore New York
             </Link>
 
             <Link
               href="/about"
               style={{
                 padding: "14px 22px",
-                border: "1px solid rgba(255,255,255,0.5)",
+                border: "1px solid rgba(255,255,255,0.6)",
                 color: "white",
-                borderRadius: "12px",
+                borderRadius: "999px",
                 textDecoration: "none",
                 fontWeight: 500,
+                backdropFilter: "blur(4px)",
               }}
             >
               Why trust TripSage?
@@ -73,46 +91,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TRUST SECTION */}
+      {/* FEATURED GRID */}
       <section style={{ background: "#fff" }}>
-        <div
-          style={{
-            maxWidth: "1200px",
-            margin: "0 auto",
-            padding: "80px 24px",
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-            gap: "32px",
-          }}
-        >
-          <div>
-            <h3>Curated deals</h3>
-            <p style={{ color: "#555" }}>
-              We surface the best-value tickets across trusted booking platforms.
-            </p>
-          </div>
-
-          <div>
-            <h3>Transparent picks</h3>
-            <p style={{ color: "#555" }}>
-              No sponsored rankings. We focus on value, flexibility, and availability.
-            </p>
-          </div>
-
-          <div>
-            <h3>Built for travelers</h3>
-            <p style={{ color: "#555" }}>
-              Simple comparisons designed to help you book confidently in minutes.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* FEATURED */}
-      <section style={{ background: "#fafafa" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "80px 24px" }}>
-          <h2 style={{ fontSize: "36px", marginBottom: "32px" }}>
-            Popular New York attractions
+        <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "96px 24px" }}>
+          <h2 style={{ fontSize: "40px", marginBottom: "32px" }}>
+            Top New York attractions
           </h2>
 
           <div
@@ -154,26 +137,61 @@ export default function Home() {
                 style={{
                   textDecoration: "none",
                   color: "#111",
-                  borderRadius: "16px",
+                  borderRadius: "20px",
                   overflow: "hidden",
                   background: "white",
-                  boxShadow: "0 12px 30px rgba(0,0,0,0.08)",
-                  transition: "transform 0.2s ease",
+                  boxShadow: "0 20px 40px rgba(0,0,0,0.12)",
+                  transition: "transform 0.2s ease, box-shadow 0.2s ease",
                 }}
               >
                 <img
                   src={item.image}
                   alt={item.title}
-                  style={{ width: "100%", height: "180px", objectFit: "cover" }}
+                  style={{ width: "100%", height: "220px", objectFit: "cover" }}
                 />
-                <div style={{ padding: "16px" }}>
-                  <h3 style={{ margin: 0 }}>{item.title}</h3>
-                  <p style={{ color: "#555", marginTop: "6px" }}>
+                <div style={{ padding: "18px" }}>
+                  <h3 style={{ margin: 0, fontSize: "20px" }}>{item.title}</h3>
+                  <p style={{ color: "#666", marginTop: "6px" }}>
                     Compare tickets & availability
                   </p>
                 </div>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TRUST STRIP */}
+      <section style={{ background: "#fafafa" }}>
+        <div
+          style={{
+            maxWidth: "1200px",
+            margin: "0 auto",
+            padding: "96px 24px",
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+            gap: "32px",
+          }}
+        >
+          <div>
+            <h3>Trusted platforms only</h3>
+            <p style={{ color: "#555" }}>
+              We link to established booking sites — no shady resellers.
+            </p>
+          </div>
+
+          <div>
+            <h3>No sponsored rankings</h3>
+            <p style={{ color: "#555" }}>
+              We don’t sell placements. Rankings are based on value and flexibility.
+            </p>
+          </div>
+
+          <div>
+            <h3>Built for real travelers</h3>
+            <p style={{ color: "#555" }}>
+              Designed to save time and avoid overpaying.
+            </p>
           </div>
         </div>
       </section>
