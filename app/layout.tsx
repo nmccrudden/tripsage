@@ -3,7 +3,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "TripSage — See more. Spend less.",
-  description: "Find the best-value tickets for top attractions and shows, with minimal fuss.",
+  description:
+    "Compare the best attraction tickets so you can book confidently with minimal fuss.",
 };
 
 export default function RootLayout({
@@ -13,59 +14,50 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body style={{ margin: 0, fontFamily: "system-ui", background: "#ffffff", color: "#111" }}>
-        {/* Header */}
+      <body style={{ margin: 0, fontFamily: "system-ui, -apple-system, BlinkMacSystemFont, sans-serif" }}>
         <header
           style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            right: 0,
-            zIndex: 50,
-            background: "rgba(255,255,255,0.95)",
-            backdropFilter: "blur(10px)",
             borderBottom: "1px solid #eee",
+            background: "white",
+            position: "sticky",
+            top: 0,
+            zIndex: 50,
           }}
         >
           <div
             style={{
               maxWidth: "1200px",
               margin: "0 auto",
-              padding: "16px 24px",
+              padding: "16px 20px",
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
             }}
           >
-            <Link href="/" style={{ textDecoration: "none", color: "#111", fontWeight: 700, fontSize: "20px" }}>
+            <Link
+              href="/"
+              style={{
+                fontWeight: 800,
+                fontSize: "22px",
+                textDecoration: "none",
+                color: "#111",
+              }}
+            >
               TripSage
             </Link>
 
-            <div style={{ display: "flex", gap: "16px" }}>
-              <Link href="/new-york" style={{ textDecoration: "none", color: "#111", fontSize: "14px" }}>
+            <nav style={{ display: "flex", gap: "16px" }}>
+              <Link href="/new-york" style={{ textDecoration: "none", color: "#333" }}>
                 New York
               </Link>
-              <Link href="/about" style={{ textDecoration: "none", color: "#111", fontSize: "14px" }}>
+              <Link href="/about" style={{ textDecoration: "none", color: "#333" }}>
                 About
               </Link>
-            </div>
+            </nav>
           </div>
         </header>
 
-        <div style={{ paddingTop: "72px", minHeight: "100vh" }}>{children}</div>
-
-        <footer
-          style={{
-            borderTop: "1px solid #eee",
-            padding: "24px",
-            textAlign: "center",
-            fontSize: "12px",
-            color: "#777",
-            background: "#fafafa",
-          }}
-        >
-          TripSage may earn a small commission if you book through our links, at no extra cost to you.
-        </footer>
+        {children}
       </body>
     </html>
   );
