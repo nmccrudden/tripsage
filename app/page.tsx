@@ -1,53 +1,54 @@
-import "./globals.css";
 import Link from "next/link";
 
-export const metadata = {
-  title: "TripSage — See more. Spend less.",
-  description: "Find the best-value tickets for top attractions and shows, with minimal fuss.",
-};
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Home() {
   return (
-    <html lang="en">
-      <body style={{ margin: 0, fontFamily: "system-ui", color: "#111", background: "#ffffff" }}>
-        <header
+    <main style={{ fontFamily: "system-ui", color: "#111" }}>
+      <section
+        style={{
+          minHeight: "85vh",
+          backgroundImage:
+            "url(https://cdn.britannica.com/73/114973-050-2DC46083/Midtown-Manhattan-Empire-State-Building-New-York.jpg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
+        <div
           style={{
-            position: "sticky",
-            top: 0,
-            zIndex: 50,
-            background: "rgba(255,255,255,0.9)",
-            backdropFilter: "blur(10px)",
-            borderBottom: "1px solid #eee",
+            maxWidth: "1200px",
+            margin: "0 auto",
+            padding: "120px 24px",
+            color: "white",
+            background: "rgba(0,0,0,0.55)",
           }}
         >
-          <div
+          <h1 style={{ fontSize: "72px", lineHeight: 1.02 }}>
+            See more.<br />Spend less.
+          </h1>
+
+          <p style={{ fontSize: "20px", maxWidth: "520px", marginTop: "24px" }}>
+            Find the best-value tickets for New York’s top attractions — with minimal fuss.
+          </p>
+
+          <Link
+            href="/new-york"
             style={{
-              maxWidth: "1200px",
-              margin: "0 auto",
-              padding: "16px 24px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
+              display: "inline-block",
+              marginTop: "36px",
+              padding: "14px 24px",
+              background: "white",
+              color: "#111",
+              borderRadius: "999px",
+              textDecoration: "none",
+              fontWeight: 600,
+              fontSize: "15px",
             }}
           >
-            <Link href="/" style={{ textDecoration: "none", color: "#111", fontWeight: 700, fontSize: "20px" }}>
-              TripSage
-            </Link>
-
-            <nav style={{ display: "flex", gap: "16px" }}>
-              <Link href="/new-york" style={{ textDecoration: "none", color: "#111", fontSize: "14px" }}>
-                New York
-              </Link>
-            </nav>
-          </div>
-        </header>
-
-        <main>{children}</main>
-      </body>
-    </html>
+            Explore New York attractions
+          </Link>
+        </div>
+      </section>
+    </main>
   );
 }
