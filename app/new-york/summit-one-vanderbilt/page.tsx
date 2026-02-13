@@ -1,69 +1,60 @@
 import Link from "next/link";
 
-export default function TopOfTheRock() {
+export const metadata = {
+  title: "Best SUMMIT One Vanderbilt Tickets (2026) — TripSage",
+  description:
+    "Compare the cheapest, refundable, and last-minute SUMMIT One Vanderbilt tickets. Find the best-value option with minimal fuss.",
+};
+
+export default function Vanderbilt() {
   return (
-    <main style={{ padding: "60px 24px", fontFamily: "system-ui", maxWidth: "900px", margin: "0 auto" }}>
-      <Link href="/" style={{ textDecoration: "none", color: "#555" }}>
-        ← Back to New York
-      </Link>
+    <main style={{ fontFamily: "system-ui", color: "#111" }}>
+      <section
+        style={{
+          minHeight: "70vh",
+          backgroundImage:
+            "url(https://s3.amazonaws.com/hines-images/one-vanderbilt/SLGreen_OneVanderbiltAve_05_ChrystlerAerial_082515_hres_web.jpg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          position: "relative",
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,0.7), rgba(0,0,0,0.35))" }} />
 
-      <h1 style={{ fontSize: "42px", marginTop: "16px" }}>
-        Top of the Rock Tickets
-      </h1>
+        <div style={{ position: "relative", maxWidth: "1200px", margin: "0 auto", padding: "140px 24px 80px", color: "white" }}>
+          <Link href="/new-york" style={{ color: "white", textDecoration: "none", fontSize: "14px" }}>
+            ← Back to New York
+          </Link>
 
-      <p style={{ fontSize: "18px", color: "#555", maxWidth: "700px" }}>
-        TripSage compares ticket options for Top of the Rock based on what matters to you —
-        price, flexibility, and how late you’re booking.
-      </p>
-
-      <div style={{ display: "grid", gap: "20px", marginTop: "40px" }}>
-        <div style={cardStyle}>
-          <h3>🏆 Best Value Overall</h3>
-          <p>Cheapest reliable ticket with no unnecessary extras.</p>
-          <a
-            href="https://www.getyourguide.com/new-york-city-l59/top-of-the-rock-observation-deck-ticket-t38686/?partner_id=UXBBWLN&utm_medium=online_publisher"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ ...buttonStyle, display: "inline-block", textDecoration: "none", textAlign: "center" }}
-          >
-            View best deal
-          </a>
+          <h1 style={{ fontSize: "52px", marginTop: "16px" }}>SUMMIT One Vanderbilt tickets</h1>
+          <p style={{ fontSize: "20px", maxWidth: "560px", marginTop: "16px", opacity: 0.95 }}>
+            Compare the best-value tickets for SUMMIT One Vanderbilt — with minimal fuss.
+          </p>
         </div>
+      </section>
 
-        <div style={cardStyle}>
-          <h3>🔁 Best Refundable Option</h3>
-          <p>Flexible ticket with free cancellation if plans change.</p>
-          <button style={buttonStyle}>Coming soon</button>
+      <section style={{ maxWidth: "1200px", margin: "0 auto", padding: "80px 24px" }}>
+        <h2 style={{ fontSize: "32px", marginBottom: "24px" }}>Best options right now</h2>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "24px" }}>
+          {["View best deal", "View refundable ticket", "View last-minute options"].map((label) => (
+            <div key={label} style={{ border: "1px solid #eee", borderRadius: "18px", padding: "24px", background: "white", boxShadow: "0 12px 30px rgba(0,0,0,0.06)" }}>
+              <h3>{label.replace("View ", "").replace(" options", "")}</h3>
+              <p style={{ color: "#555" }}>Compare current availability and pricing from trusted platforms.</p>
+              <a
+                href="https://www.getyourguide.com/new-york-city-l59/summit-one-vanderbilt-t411587/?partner_id=UXBBWLN&utm_medium=online_publisher"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ display: "inline-block", marginTop: "12px", padding: "12px 18px", borderRadius: "999px", background: "#111", color: "white", textDecoration: "none", fontWeight: 600, fontSize: "14px" }}
+              >
+                {label}
+              </a>
+            </div>
+          ))}
         </div>
-
-        <div style={cardStyle}>
-          <h3>⏱ Best for Late Planners</h3>
-          <p>Available today or tomorrow with instant confirmation.</p>
-          <button style={buttonStyle}>Coming soon</button>
-        </div>
-      </div>
-
-      <p style={{ marginTop: "40px", fontSize: "12px", color: "#777" }}>
-        TripSage may earn a small commission if you book through our links, at no extra cost to you.
-      </p>
+      </section>
     </main>
   );
 }
-
-const cardStyle: React.CSSProperties = {
-  border: "1px solid #eee",
-  borderRadius: "16px",
-  padding: "20px",
-  background: "white",
-  boxShadow: "0 10px 24px rgba(0,0,0,0.06)",
-};
-
-const buttonStyle: React.CSSProperties = {
-  marginTop: "12px",
-  padding: "10px 14px",
-  borderRadius: "10px",
-  border: "none",
-  background: "#111",
-  color: "white",
-  cursor: "pointer",
-};
