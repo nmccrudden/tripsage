@@ -2,99 +2,169 @@ import Link from "next/link";
 
 export default function OneWorld() {
   return (
-    <main
-      style={{
-        fontFamily: "system-ui",
-        background: "#fafafa",
-        minHeight: "100vh",
-        padding: "80px 24px",
-      }}
-    >
-      <div style={{ maxWidth: "900px", margin: "0 auto" }}>
-        <Link href="/" style={{ textDecoration: "none", color: "#666", fontSize: "14px" }}>
-          ← Back to New York
-        </Link>
-
-        <h1 style={{ fontSize: "48px", marginTop: "16px", marginBottom: "12px" }}>
-          One World Observatory Tickets
-        </h1>
-
-        <p style={{ fontSize: "18px", color: "#555", maxWidth: "700px" }}>
-          Compare ticket options for One World Observatory.  
-          We highlight the best-value option, the most flexible ticket, and the best choice for last-minute bookings.
-        </p>
-
-        <div style={{ display: "grid", gap: "24px", marginTop: "48px" }}>
-          <OfferCard
-            title="Best Value Ticket"
-            description="The cheapest reliable option with instant confirmation."
-            href="https://www.getyourguide.com/new-york-city-l59/nyc-one-world-observatory-skip-the-line-ticket-t552373/?partner_id=UXBBWLN&utm_medium=online_publisher"
-            button="View best deal"
-          />
-
-          <OfferCard
-            title="Flexible Refundable Ticket"
-            description="Free cancellation available if your plans change."
-            href="PASTE_YOUR_REFUNDABLE_LINK"
-            button="View flexible option"
-          />
-
-          <OfferCard
-            title="Last-Minute Tickets"
-            description="Same-day or next-day availability."
-            href="PASTE_YOUR_LAST_MINUTE_LINK"
-            button="View last-minute availability"
-          />
-        </div>
-
-        <p style={{ marginTop: "60px", fontSize: "12px", color: "#777" }}>
-          TripSage may earn a small commission if you book through our links, at no extra cost to you.
-        </p>
-      </div>
-    </main>
-  );
-}
-
-function OfferCard({
-  title,
-  description,
-  href,
-  button,
-}: {
-  title: string;
-  description: string;
-  href: string;
-  button: string;
-}) {
-  return (
-    <div
-      style={{
-        background: "white",
-        borderRadius: "18px",
-        padding: "24px",
-        border: "1px solid #eee",
-        boxShadow: "0 10px 30px rgba(0,0,0,0.05)",
-      }}
-    >
-      <h3 style={{ fontSize: "20px", marginBottom: "6px" }}>{title}</h3>
-      <p style={{ color: "#555", marginBottom: "12px" }}>{description}</p>
-
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
+    <main style={{ fontFamily: "system-ui", color: "#111" }}>
+      {/* Hero */}
+      <section
         style={{
-          display: "inline-block",
-          padding: "10px 16px",
-          borderRadius: "10px",
-          background: "#111",
-          color: "white",
-          textDecoration: "none",
-          fontSize: "14px",
+          minHeight: "70vh",
+          backgroundImage:
+            "url(https://media.cntraveler.com/photos/53e2ea84dddaa35c30f643ad/master/pass/one-world-observatory.jpg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          position: "relative",
+          display: "flex",
+          alignItems: "center",
         }}
       >
-        {button}
-      </a>
-    </div>
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: "linear-gradient(180deg, rgba(0,0,0,0.7), rgba(0,0,0,0.35))",
+          }}
+        />
+
+        <div
+          style={{
+            position: "relative",
+            maxWidth: "1200px",
+            margin: "0 auto",
+            padding: "140px 24px 80px",
+            color: "white",
+          }}
+        >
+          <Link href="/new-york" style={{ color: "white", textDecoration: "none", fontSize: "14px" }}>
+            ← Back to New York
+          </Link>
+
+          <h1 style={{ fontSize: "52px", marginTop: "16px", maxWidth: "700px", lineHeight: 1.1 }}>
+            One World Observatory tickets
+          </h1>
+
+          <p style={{ fontSize: "20px", maxWidth: "560px", marginTop: "16px", opacity: 0.95 }}>
+            Compare the best-value tickets for One World Observatory — with minimal fuss.
+          </p>
+        </div>
+      </section>
+
+      {/* Content */}
+      <section style={{ maxWidth: "1200px", margin: "0 auto", padding: "80px 24px" }}>
+        <h2 style={{ fontSize: "32px", marginBottom: "24px" }}>Best options right now</h2>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+            gap: "24px",
+          }}
+        >
+          {/* Best Value */}
+          <div
+            style={{
+              border: "1px solid #eee",
+              borderRadius: "18px",
+              padding: "24px",
+              background: "white",
+              boxShadow: "0 12px 30px rgba(0,0,0,0.06)",
+            }}
+          >
+            <h3 style={{ marginTop: 0 }}>Best value overall</h3>
+            <p style={{ color: "#555" }}>
+              The cheapest reliable ticket with no unnecessary extras.
+            </p>
+            <a
+              href="PASTE_YOUR_AFFILIATE_LINK_HERE"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "inline-block",
+                marginTop: "12px",
+                padding: "12px 18px",
+                borderRadius: "999px",
+                background: "#111",
+                color: "white",
+                textDecoration: "none",
+                fontWeight: 600,
+                fontSize: "14px",
+              }}
+            >
+              View best deal
+            </a>
+          </div>
+
+          {/* Refundable */}
+          <div
+            style={{
+              border: "1px solid #eee",
+              borderRadius: "18px",
+              padding: "24px",
+              background: "white",
+              boxShadow: "0 12px 30px rgba(0,0,0,0.06)",
+            }}
+          >
+            <h3 style={{ marginTop: 0 }}>Best refundable option</h3>
+            <p style={{ color: "#555" }}>
+              Flexible ticket with free cancellation if plans change.
+            </p>
+            <a
+              href="PASTE_YOUR_AFFILIATE_LINK_HERE"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "inline-block",
+                marginTop: "12px",
+                padding: "12px 18px",
+                borderRadius: "999px",
+                background: "#111",
+                color: "white",
+                textDecoration: "none",
+                fontWeight: 600,
+                fontSize: "14px",
+              }}
+            >
+              View refundable ticket
+            </a>
+          </div>
+
+          {/* Last minute */}
+          <div
+            style={{
+              border: "1px solid #eee",
+              borderRadius: "18px",
+              padding: "24px",
+              background: "white",
+              boxShadow: "0 12px 30px rgba(0,0,0,0.06)",
+            }}
+          >
+            <h3 style={{ marginTop: 0 }}>Best for late planners</h3>
+            <p style={{ color: "#555" }}>
+              Available today or tomorrow with instant confirmation.
+            </p>
+            <a
+              href="PASTE_YOUR_AFFILIATE_LINK_HERE"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "inline-block",
+                marginTop: "12px",
+                padding: "12px 18px",
+                borderRadius: "999px",
+                background: "#111",
+                color: "white",
+                textDecoration: "none",
+                fontWeight: 600,
+                fontSize: "14px",
+              }}
+            >
+              View last-minute options
+            </a>
+          </div>
+        </div>
+
+        <p style={{ marginTop: "48px", fontSize: "12px", color: "#777" }}>
+          TripSage may earn a small commission if you book through our links, at no extra cost to you.
+        </p>
+      </section>
+    </main>
   );
 }
