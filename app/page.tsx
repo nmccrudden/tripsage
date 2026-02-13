@@ -20,7 +20,7 @@ export default function RootLayout({
             position: "sticky",
             top: 0,
             zIndex: 50,
-            background: "rgba(255,255,255,0.9)",
+            background: "rgba(255,255,255,0.95)",
             backdropFilter: "blur(10px)",
             borderBottom: "1px solid #eee",
           }}
@@ -29,7 +29,7 @@ export default function RootLayout({
             style={{
               maxWidth: "1200px",
               margin: "0 auto",
-              padding: "16px 24px",
+              padding: "14px 24px",
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
@@ -50,7 +50,7 @@ export default function RootLayout({
           </div>
         </header>
 
-        {children}
+        <main>{children}</main>
 
         <Analytics />
       </body>
