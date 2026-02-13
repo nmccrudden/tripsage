@@ -2,14 +2,7 @@ import Link from "next/link";
 
 export default function OneWorld() {
   return (
-    <main
-      style={{
-        padding: "60px 24px",
-        fontFamily: "system-ui",
-        maxWidth: "900px",
-        margin: "0 auto",
-      }}
-    >
+    <main style={{ padding: "60px 24px", fontFamily: "system-ui", maxWidth: "900px", margin: "0 auto" }}>
       <Link href="/" style={{ textDecoration: "none", color: "#555" }}>
         ← Back to New York
       </Link>
@@ -31,12 +24,7 @@ export default function OneWorld() {
             href="https://www.getyourguide.com/new-york-city-l59/nyc-one-world-observatory-skip-the-line-ticket-t552373/?partner_id=UXBBWLN&utm_medium=online_publisher"
             target="_blank"
             rel="noopener noreferrer"
-            style={{
-              ...buttonStyle,
-              display: "inline-block",
-              textDecoration: "none",
-              textAlign: "center",
-            }}
+            style={{ ...buttonStyle, display: "inline-block", textDecoration: "none", textAlign: "center" }}
           >
             View best deal
           </a>
@@ -45,13 +33,13 @@ export default function OneWorld() {
         <div style={cardStyle}>
           <h3>🔁 Best Refundable Option</h3>
           <p>Flexible ticket with free cancellation if plans change.</p>
-          <button style={buttonStyle}>View refundable ticket</button>
+          <button style={buttonStyle}>Coming soon</button>
         </div>
 
         <div style={cardStyle}>
           <h3>⏱ Best for Late Planners</h3>
           <p>Available today or tomorrow with instant confirmation.</p>
-          <button style={buttonStyle}>View last-minute options</button>
+          <button style={buttonStyle}>Coming soon</button>
         </div>
       </div>
 
