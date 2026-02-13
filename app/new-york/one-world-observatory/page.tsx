@@ -2,7 +2,14 @@ import Link from "next/link";
 
 export default function OneWorld() {
   return (
-    <main style={{ padding: "60px 24px", fontFamily: "system-ui", maxWidth: "900px", margin: "0 auto" }}>
+    <main
+      style={{
+        padding: "60px 24px",
+        fontFamily: "system-ui",
+        maxWidth: "900px",
+        margin: "0 auto",
+      }}
+    >
       <Link href="/" style={{ textDecoration: "none", color: "#555" }}>
         ← Back to New York
       </Link>
@@ -20,15 +27,19 @@ export default function OneWorld() {
         <div style={cardStyle}>
           <h3>🏆 Best Value Overall</h3>
           <p>Cheapest reliable ticket with no unnecessary extras.</p>
-          <<a
-  href="https://www.getyourguide.com/new-york-city-l59/nyc-one-world-observatory-skip-the-line-ticket-t552373/?partner_id=UXBBWLN&utm_medium=online_publisher"
-  target="_blank"
-  rel="noopener noreferrer"
-  style={{ ...buttonStyle, display: "inline-block", textDecoration: "none", textAlign: "center" }}
->
-  View best deal
-</a>
->
+          <a
+            href="https://www.getyourguide.com/new-york-city-l59/nyc-one-world-observatory-skip-the-line-ticket-t552373/?partner_id=UXBBWLN&utm_medium=online_publisher"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              ...buttonStyle,
+              display: "inline-block",
+              textDecoration: "none",
+              textAlign: "center",
+            }}
+          >
+            View best deal
+          </a>
         </div>
 
         <div style={cardStyle}>
@@ -43,6 +54,10 @@ export default function OneWorld() {
           <button style={buttonStyle}>View last-minute options</button>
         </div>
       </div>
+
+      <p style={{ marginTop: "40px", fontSize: "12px", color: "#777" }}>
+        TripSage may earn a small commission if you book through our links, at no extra cost to you.
+      </p>
     </main>
   );
 }
@@ -64,6 +79,3 @@ const buttonStyle: React.CSSProperties = {
   color: "white",
   cursor: "pointer",
 };
-<p style={{ marginTop: "40px", fontSize: "12px", color: "#777" }}>
-  TripSage may earn a small commission if you book through our links, at no extra cost to you.
-</p>
