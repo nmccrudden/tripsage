@@ -41,16 +41,19 @@ export default function RootLayout({
               TripSage
             </Link>
 
-            <Link href="/new-york" style={{ textDecoration: "none", color: "#111", fontSize: "14px" }}>
-              New York
-            </Link>
+            <div style={{ display: "flex", gap: "16px" }}>
+              <Link href="/new-york" style={{ textDecoration: "none", color: "#111", fontSize: "14px" }}>
+                New York
+              </Link>
+              <Link href="/about" style={{ textDecoration: "none", color: "#111", fontSize: "14px" }}>
+                About
+              </Link>
+            </div>
           </div>
         </header>
 
-        {/* Page content */}
         <div style={{ paddingTop: "72px", minHeight: "100vh" }}>{children}</div>
 
-        {/* Global footer with disclosure */}
         <footer
           style={{
             borderTop: "1px solid #eee",
