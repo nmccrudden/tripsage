@@ -91,7 +91,6 @@ export default function NewYork() {
                 overflow: "hidden",
                 background: "white",
                 boxShadow: "0 12px 30px rgba(0,0,0,0.08)",
-                transition: "transform 0.2s ease, box-shadow 0.2s ease",
               }}
             >
               <div style={{ height: "200px", overflow: "hidden" }}>
@@ -110,6 +109,11 @@ export default function NewYork() {
             </Link>
           ))}
         </div>
+
+        {/* Disclosure */}
+        <p style={{ marginTop: "48px", fontSize: "12px", color: "#777" }}>
+          TripSage may earn a small commission if you book through our links, at no extra cost to you.
+        </p>
       </section>
     </main>
   );
