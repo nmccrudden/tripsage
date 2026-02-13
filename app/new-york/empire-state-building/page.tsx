@@ -3,13 +3,9 @@ import Link from "next/link";
 export default function EmpireStateBuilding() {
   return (
     <main style={{ padding: "60px 24px", fontFamily: "system-ui", maxWidth: "900px", margin: "0 auto" }}>
-      <Link href="/" style={{ textDecoration: "none", color: "#555" }}>
-        ← Back to New York
-      </Link>
+      <Link href="/" style={{ textDecoration: "none", color: "#555" }}>← Back to New York</Link>
 
-      <h1 style={{ fontSize: "42px", marginTop: "16px" }}>
-        Empire State Building Tickets
-      </h1>
+      <h1 style={{ fontSize: "42px", marginTop: "16px" }}>Empire State Building Tickets</h1>
 
       <p style={{ fontSize: "18px", color: "#555", maxWidth: "700px" }}>
         TripSage compares Empire State Building ticket options based on value, flexibility, and availability.
@@ -19,7 +15,14 @@ export default function EmpireStateBuilding() {
         <div style={cardStyle}>
           <h3>🏆 Best Value Overall</h3>
           <p>Cheapest reliable ticket with no unnecessary extras.</p>
-          <button style={buttonStyle}>View best deal</button>
+          <a
+            href="PASTE_EMPIRE_STATE_AFFILIATE_LINK_HERE"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ ...buttonStyle, display: "inline-block", textDecoration: "none", textAlign: "center" }}
+          >
+            View best deal
+          </a>
         </div>
 
         <div style={cardStyle}>
@@ -34,6 +37,10 @@ export default function EmpireStateBuilding() {
           <button style={buttonStyle}>View last-minute options</button>
         </div>
       </div>
+
+      <p style={{ marginTop: "40px", fontSize: "12px", color: "#777" }}>
+        TripSage may earn a small commission if you book through our links, at no extra cost to you.
+      </p>
     </main>
   );
 }
@@ -55,6 +62,3 @@ const buttonStyle: React.CSSProperties = {
   color: "white",
   cursor: "pointer",
 };
-<p style={{ marginTop: "40px", fontSize: "12px", color: "#777" }}>
-  TripSage may earn a small commission if you book through our links, at no extra cost to you.
-</p>
