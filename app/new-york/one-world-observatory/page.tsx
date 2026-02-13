@@ -73,7 +73,7 @@ export default function OneWorld() {
               The cheapest reliable ticket with no unnecessary extras.
             </p>
             <a
-              href="PASTE_YOUR_AFFILIATE_LINK_HERE"
+              href="https://www.getyourguide.com/new-york-city-l59/nyc-one-world-observatory-skip-the-line-ticket-t552373/?partner_id=UXBBWLN&utm_medium=online_publisher"
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -107,7 +107,7 @@ export default function OneWorld() {
               Flexible ticket with free cancellation if plans change.
             </p>
             <a
-              href="PASTE_YOUR_AFFILIATE_LINK_HERE"
+              href="https://www.getyourguide.com/new-york-city-l59/nyc-one-world-observatory-skip-the-line-ticket-t552373/?partner_id=UXBBWLN&utm_medium=online_publisher"
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -126,7 +126,7 @@ export default function OneWorld() {
             </a>
           </div>
 
-          {/* Last minute */}
+          {/* Late planners */}
           <div
             style={{
               border: "1px solid #eee",
@@ -141,7 +141,7 @@ export default function OneWorld() {
               Available today or tomorrow with instant confirmation.
             </p>
             <a
-              href="PASTE_YOUR_AFFILIATE_LINK_HERE"
+              href="https://www.getyourguide.com/new-york-city-l59/nyc-one-world-observatory-skip-the-line-ticket-t552373/?partner_id=UXBBWLN&utm_medium=online_publisher"
               target="_blank"
               rel="noopener noreferrer"
               style={{
