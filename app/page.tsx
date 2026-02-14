@@ -7,8 +7,7 @@ export default function Home() {
       <section
         style={{
           minHeight: "90vh",
-          backgroundImage:
-            "url(https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=2400&auto=format&fit=crop)",
+          backgroundImage: "url(/hero-nyc.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           position: "relative",
@@ -20,7 +19,7 @@ export default function Home() {
           style={{
             position: "absolute",
             inset: 0,
-            background: "linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.7))",
+            background: "linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.75))",
           }}
         />
 
@@ -46,7 +45,7 @@ export default function Home() {
             Spend less.
           </h1>
 
-          <p style={{ fontSize: "20px", maxWidth: "640px", opacity: 0.95 }}>
+          <p style={{ fontSize: "20px", maxWidth: "680px", opacity: 0.95 }}>
             TripSage compares ticket prices for the most popular attractions so you can book confidently — with minimal fuss.
           </p>
 
@@ -69,7 +68,7 @@ export default function Home() {
               href="/about"
               style={{
                 padding: "14px 24px",
-                border: "1px solid rgba(255,255,255,0.5)",
+                border: "1px solid rgba(255,255,255,0.6)",
                 color: "white",
                 borderRadius: "12px",
                 textDecoration: "none",
