@@ -6,7 +6,7 @@ export default function Home() {
       {/* Hero */}
       <section
         style={{
-          minHeight: "80vh",
+          minHeight: "85vh",
           backgroundImage: "url('/hero-nyc.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -20,37 +20,37 @@ export default function Home() {
             position: "absolute",
             inset: 0,
             background:
-              "linear-gradient(90deg, rgba(0,0,0,0.75), rgba(0,0,0,0.45), rgba(0,0,0,0.2))",
+              "linear-gradient(to right, rgba(0,0,0,0.65), rgba(0,0,0,0.25))",
           }}
         />
 
         <div
           style={{
             position: "relative",
-            maxWidth: "1100px",
+            maxWidth: "1200px",
             margin: "0 auto",
             padding: "120px 24px",
             color: "white",
           }}
         >
-          <h1 style={{ fontSize: "56px", lineHeight: 1.1, marginBottom: "16px" }}>
+          <h1 style={{ fontSize: "56px", lineHeight: 1.1, maxWidth: "700px" }}>
             See more.
             <br />
             Spend less.
           </h1>
 
-          <p style={{ fontSize: "20px", maxWidth: "560px", opacity: 0.95 }}>
+          <p style={{ fontSize: "20px", maxWidth: "620px", marginTop: "20px" }}>
             TripSage compares ticket prices for the most popular attractions so you can
             book confidently — with minimal fuss.
           </p>
 
-          <div style={{ marginTop: "32px", display: "flex", gap: "16px", flexWrap: "wrap" }}>
+          <div style={{ display: "flex", gap: "12px", marginTop: "28px" }}>
             <Link
               href="/new-york"
               style={{
+                padding: "14px 22px",
                 background: "white",
                 color: "#111",
-                padding: "14px 22px",
                 borderRadius: "12px",
                 textDecoration: "none",
                 fontWeight: 600,
@@ -62,12 +62,12 @@ export default function Home() {
             <Link
               href="/about"
               style={{
-                border: "1px solid rgba(255,255,255,0.6)",
-                color: "white",
                 padding: "14px 22px",
+                border: "1px solid white",
+                color: "white",
                 borderRadius: "12px",
                 textDecoration: "none",
-                fontWeight: 500,
+                fontWeight: 600,
               }}
             >
               Why trust TripSage?
@@ -76,15 +76,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Trust Section */}
+      {/* Trust section */}
       <section
         style={{
-          maxWidth: "1100px",
+          maxWidth: "1200px",
           margin: "0 auto",
-          padding: "100px 24px",
+          padding: "80px 24px",
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-          gap: "40px",
+          gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+          gap: "32px",
         }}
       >
         <div>
@@ -98,16 +98,14 @@ export default function Home() {
         <div>
           <h3>Trusted booking partners</h3>
           <p>
-            We only link to established platforms like GetYourGuide and Viator so you
-            can book with confidence.
+            We only link to established platforms like GetYourGuide and Viator so you can
+            book with confidence.
           </p>
         </div>
 
         <div>
           <h3>No fake discounts</h3>
-          <p>
-            No inflated “was” prices. No sponsored rankings. Just clear comparisons.
-          </p>
+          <p>No inflated “was” prices. No sponsored rankings. Just clear comparisons.</p>
         </div>
       </section>
     </main>
