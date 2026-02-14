@@ -108,10 +108,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <footer style={{ padding: "40px 24px", textAlign: "center", color: "#777", fontSize: "13px" }}>
-        TripSage may earn a small commission if you book through our links, at no extra cost to you.
-      </footer>
     </main>
   );
 }
