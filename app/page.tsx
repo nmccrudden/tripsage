@@ -1,125 +1,90 @@
-import Link from "next/link";
-
 export default function Home() {
   return (
-    <main>
-      {/* Hero */}
+    <main className="w-full">
+
+      {/* HERO */}
       <section
-        style={{
-          minHeight: "85vh",
-          backgroundImage: "url('/hero-nyc.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          position: "relative",
-          display: "flex",
-          alignItems: "center",
-        }}
+        className="relative flex min-h-[70vh] items-center bg-cover bg-center"
+        style={{ backgroundImage: "url('/hero-nyc.jpg')" }}
       >
-        {/* Dark overlay */}
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            background:
-              "linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.35))",
-          }}
-        />
-
-        <div
-          style={{
-            position: "relative",
-            maxWidth: "1200px",
-            margin: "0 auto",
-            padding: "120px 24px",
-            color: "white",
-          }}
-        >
-          <h1 style={{ fontSize: "56px", lineHeight: 1.1, maxWidth: "700px" }}>
-            See more.
-            <br />
-            Spend less.
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative z-10 mx-auto max-w-6xl px-6 text-white">
+          <h1 className="text-5xl font-semibold leading-tight md:text-6xl">
+            See more.<br />Spend less.
           </h1>
-
-          <p style={{ fontSize: "20px", maxWidth: "620px", marginTop: "20px" }}>
-            TripSage compares ticket prices for the most popular attractions so you can
-            book confidently — with minimal fuss.
+          <p className="mt-4 max-w-2xl text-lg text-white/90">
+            TripSage compares ticket prices for the most popular attractions so you can book confidently — with minimal fuss.
           </p>
 
-          <div style={{ display: "flex", gap: "12px", marginTop: "28px" }}>
-            <Link
+          <div className="mt-8 flex flex-wrap gap-4">
+            <a
               href="/new-york"
-              style={{
-                padding: "14px 22px",
-                background: "white",
-                color: "#111",
-                borderRadius: "12px",
-                textDecoration: "none",
-                fontWeight: 600,
-              }}
+              className="rounded-md bg-white px-6 py-3 text-sm font-medium text-black"
             >
               Explore New York
-            </Link>
-
-            <Link
+            </a>
+            <a
               href="/about"
-              style={{
-                padding: "14px 22px",
-                border: "1px solid white",
-                color: "white",
-                borderRadius: "12px",
-                textDecoration: "none",
-                fontWeight: 600,
-              }}
+              className="rounded-md border border-white/70 px-6 py-3 text-sm font-medium text-white"
             >
               Why trust TripSage?
-            </Link>
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Hard visual break */}
-      <div style={{ height: "40px", background: "#ffffff" }} />
+      {/* TRUST */}
+      <section className="bg-white py-20">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-3 text-center">
 
-      {/* Trust section */}
-      <section
-        style={{
-          background: "#ffffff",
-          borderTop: "1px solid #eee",
-          padding: "80px 0",
-        }}
-      >
-        <div
-          style={{
-            maxWidth: "1200px",
-            margin: "0 auto",
-            padding: "0 24px",
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-            gap: "48px",
-          }}
-        >
-          <div>
-            <h3>Transparent comparisons</h3>
-            <p>
-              We compare tickets based on price, flexibility (refunds), and availability —
-              not paid placements.
-            </p>
-          </div>
+            <div>
+              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-gray-100">
+                🔍
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900">
+                Transparent comparisons
+              </h3>
+              <p className="mt-2 text-sm text-gray-600">
+                We compare tickets based on price, flexibility (refunds), and availability — not paid placements.
+              </p>
+            </div>
 
-          <div>
-            <h3>Trusted booking partners</h3>
-            <p>
-              We only link to established platforms like GetYourGuide and Viator so you can
-              book with confidence.
-            </p>
-          </div>
+            <div>
+              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-gray-100">
+                🤝
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900">
+                Trusted booking partners
+              </h3>
+              <p className="mt-2 text-sm text-gray-600">
+                We only link to established platforms like GetYourGuide and Viator so you can book with confidence.
+              </p>
+            </div>
 
-          <div>
-            <h3>No fake discounts</h3>
-            <p>No inflated “was” prices. No sponsored rankings. Just clear comparisons.</p>
+            <div>
+              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-gray-100">
+                💸
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900">
+                No fake discounts
+              </h3>
+              <p className="mt-2 text-sm text-gray-600">
+                No inflated “was” prices. No sponsored rankings. Just clear comparisons.
+              </p>
+            </div>
+
           </div>
         </div>
       </section>
+
+      {/* COMMISSION (single, not duplicated) */}
+      <footer className="border-t border-gray-200 py-8">
+        <p className="text-center text-xs text-gray-500">
+          TripSage may earn a small commission if you book through our links, at no extra cost to you.
+        </p>
+      </footer>
+
     </main>
   );
 }
