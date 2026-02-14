@@ -39,9 +39,6 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-12 md:grid-cols-3 text-center">
 
             <div>
-              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-gray-100">
-                🔍
-              </div>
               <h3 className="text-lg font-semibold text-gray-900">
                 Transparent comparisons
               </h3>
@@ -51,9 +48,6 @@ export default function Home() {
             </div>
 
             <div>
-              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-gray-100">
-                🤝
-              </div>
               <h3 className="text-lg font-semibold text-gray-900">
                 Trusted booking partners
               </h3>
@@ -63,9 +57,6 @@ export default function Home() {
             </div>
 
             <div>
-              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-gray-100">
-                💸
-              </div>
               <h3 className="text-lg font-semibold text-gray-900">
                 No fake discounts
               </h3>
@@ -78,7 +69,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* COMMISSION (single, not duplicated) */}
+      {/* COMMISSION (single line only) */}
       <footer className="border-t border-gray-200 py-8">
         <p className="text-center text-xs text-gray-500">
           TripSage may earn a small commission if you book through our links, at no extra cost to you.
