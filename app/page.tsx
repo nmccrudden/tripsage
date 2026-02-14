@@ -8,7 +8,7 @@ export default function Home() {
         style={{
           minHeight: "90vh",
           backgroundImage:
-            "url(https://images.unsplash.com/photo-1545420331-8f7c3c1c1d5f?q=80&w=2000&auto=format&fit=crop)",
+            "url(https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=2400&auto=format&fit=crop)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           position: "relative",
@@ -20,7 +20,7 @@ export default function Home() {
           style={{
             position: "absolute",
             inset: 0,
-            background: "linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.75))",
+            background: "linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.7))",
           }}
         />
 
@@ -33,39 +33,28 @@ export default function Home() {
             color: "white",
           }}
         >
-          <span
-            style={{
-              display: "inline-block",
-              padding: "8px 14px",
-              borderRadius: "999px",
-              background: "rgba(255,255,255,0.15)",
-              fontSize: "14px",
-              marginBottom: "20px",
-            }}
-          >
-            New York attraction tickets, simplified
-          </span>
-
           <h1
             style={{
-              fontSize: "64px",
-              maxWidth: "700px",
+              fontSize: "clamp(44px, 6vw, 76px)",
               lineHeight: 1.05,
-              marginBottom: "20px",
+              maxWidth: "760px",
+              marginBottom: "16px",
             }}
           >
-            See more. <br /> Spend less.
+            See more.
+            <br />
+            Spend less.
           </h1>
 
-          <p style={{ fontSize: "20px", maxWidth: "560px", opacity: 0.95 }}>
-            TripSage compares the best attraction tickets so you can book confidently — with minimal fuss.
+          <p style={{ fontSize: "20px", maxWidth: "640px", opacity: 0.95 }}>
+            TripSage compares ticket prices for the most popular attractions so you can book confidently — with minimal fuss.
           </p>
 
-          <div style={{ display: "flex", gap: "14px", marginTop: "32px", flexWrap: "wrap" }}>
+          <div style={{ display: "flex", gap: "12px", marginTop: "28px", flexWrap: "wrap" }}>
             <Link
               href="/new-york"
               style={{
-                padding: "14px 22px",
+                padding: "14px 24px",
                 background: "white",
                 color: "#111",
                 borderRadius: "12px",
@@ -79,8 +68,8 @@ export default function Home() {
             <Link
               href="/about"
               style={{
-                padding: "14px 22px",
-                border: "1px solid rgba(255,255,255,0.4)",
+                padding: "14px 24px",
+                border: "1px solid rgba(255,255,255,0.5)",
                 color: "white",
                 borderRadius: "12px",
                 textDecoration: "none",
@@ -89,40 +78,6 @@ export default function Home() {
             >
               Why trust TripSage?
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* TRUST */}
-      <section style={{ maxWidth: "1200px", margin: "0 auto", padding: "100px 24px" }}>
-        <h2 style={{ fontSize: "36px", marginBottom: "40px" }}>Why travelers trust TripSage</h2>
-
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-            gap: "32px",
-          }}
-        >
-          <div>
-            <h3>Curated deals</h3>
-            <p style={{ color: "#555" }}>
-              We highlight the best-value tickets across trusted booking platforms.
-            </p>
-          </div>
-
-          <div>
-            <h3>Transparent picks</h3>
-            <p style={{ color: "#555" }}>
-              No sponsored rankings. We compare price, flexibility, and availability.
-            </p>
-          </div>
-
-          <div>
-            <h3>Designed for travelers</h3>
-            <p style={{ color: "#555" }}>
-              Built for fast decisions — no spreadsheets, no fake discounts.
-            </p>
           </div>
         </div>
       </section>
@@ -142,6 +97,12 @@ export default function Home() {
             }}
           >
             {[
+              {
+                title: "Statue of Liberty",
+                image:
+                  "https://cdn.britannica.com/61/93061-050-99147DCE/Statue-of-Liberty-Island-New-York-Bay.jpg",
+                href: "/new-york/statue-of-liberty",
+              },
               {
                 title: "One World Observatory",
                 image:
@@ -165,12 +126,6 @@ export default function Home() {
                 image:
                   "https://s3.amazonaws.com/hines-images/one-vanderbilt/SLGreen_OneVanderbiltAve_05_ChrystlerAerial_082515_hres_web.jpg",
                 href: "/new-york/summit-one-vanderbilt",
-              },
-              {
-                title: "Statue of Liberty",
-                image:
-                  "https://cdn.britannica.com/61/93061-050-99147DCE/Statue-of-Liberty-Island-New-York-Bay.jpg",
-                href: "/new-york/statue-of-liberty",
               },
             ].map((item) => (
               <Link
