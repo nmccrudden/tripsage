@@ -137,18 +137,6 @@ export default function Home() {
           </p>
         </div>
       </section>
-
-      {/* Footer Disclosure (single source of truth) */}
-      <footer
-        style={{
-          textAlign: "center",
-          padding: "32px 16px 48px",
-          color: "#777",
-          fontSize: "14px",
-        }}
-      >
-        TripSage may earn a small commission if you book through our links, at no extra cost to you.
-      </footer>
     </main>
   );
 }
