@@ -15,12 +15,13 @@ export default function Home() {
           alignItems: "center",
         }}
       >
+        {/* Dark overlay */}
         <div
           style={{
             position: "absolute",
             inset: 0,
             background:
-              "linear-gradient(to right, rgba(0,0,0,0.65), rgba(0,0,0,0.25))",
+              "linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.35))",
           }}
         />
 
@@ -76,36 +77,47 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Hard visual break */}
+      <div style={{ height: "40px", background: "#ffffff" }} />
+
       {/* Trust section */}
       <section
         style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-          padding: "80px 24px",
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-          gap: "32px",
+          background: "#ffffff",
+          borderTop: "1px solid #eee",
+          padding: "80px 0",
         }}
       >
-        <div>
-          <h3>Transparent comparisons</h3>
-          <p>
-            We compare tickets based on price, flexibility (refunds), and availability —
-            not paid placements.
-          </p>
-        </div>
+        <div
+          style={{
+            maxWidth: "1200px",
+            margin: "0 auto",
+            padding: "0 24px",
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+            gap: "48px",
+          }}
+        >
+          <div>
+            <h3>Transparent comparisons</h3>
+            <p>
+              We compare tickets based on price, flexibility (refunds), and availability —
+              not paid placements.
+            </p>
+          </div>
 
-        <div>
-          <h3>Trusted booking partners</h3>
-          <p>
-            We only link to established platforms like GetYourGuide and Viator so you can
-            book with confidence.
-          </p>
-        </div>
+          <div>
+            <h3>Trusted booking partners</h3>
+            <p>
+              We only link to established platforms like GetYourGuide and Viator so you can
+              book with confidence.
+            </p>
+          </div>
 
-        <div>
-          <h3>No fake discounts</h3>
-          <p>No inflated “was” prices. No sponsored rankings. Just clear comparisons.</p>
+          <div>
+            <h3>No fake discounts</h3>
+            <p>No inflated “was” prices. No sponsored rankings. Just clear comparisons.</p>
+          </div>
         </div>
       </section>
     </main>
