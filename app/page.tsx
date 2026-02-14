@@ -6,44 +6,67 @@ export default function Home() {
       {/* Hero */}
       <section
         style={{
-          minHeight: "85vh",
-          backgroundImage: "url('/hero-nyc.jpg')",
+          minHeight: "90vh",
+          backgroundImage: "url(/hero-nyc.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           position: "relative",
           display: "flex",
           alignItems: "center",
+          justifyContent: "center",
+          textAlign: "center",
         }}
       >
+        {/* Overlay */}
         <div
           style={{
             position: "absolute",
             inset: 0,
             background:
-              "linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.2))",
+              "linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.65))",
           }}
         />
 
         <div
           style={{
             position: "relative",
-            maxWidth: "1200px",
-            margin: "0 auto",
-            padding: "120px 24px",
+            maxWidth: "820px",
+            padding: "0 24px",
             color: "white",
           }}
         >
-          <h1 style={{ fontSize: "64px", maxWidth: "700px", lineHeight: 1.05 }}>
+          <h1
+            style={{
+              fontSize: "64px",
+              lineHeight: 1.05,
+              letterSpacing: "-0.02em",
+              marginBottom: "20px",
+            }}
+          >
             See more.
             <br />
             Spend less.
           </h1>
 
-          <p style={{ fontSize: "20px", maxWidth: "620px", marginTop: "20px", opacity: 0.95 }}>
+          <p
+            style={{
+              fontSize: "20px",
+              opacity: 0.95,
+              maxWidth: "640px",
+              margin: "0 auto 32px",
+            }}
+          >
             TripSage compares ticket prices for the most popular attractions so you can book confidently — with minimal fuss.
           </p>
 
-          <div style={{ display: "flex", gap: "12px", marginTop: "28px", flexWrap: "wrap" }}>
+          <div
+            style={{
+              display: "flex",
+              gap: "12px",
+              justifyContent: "center",
+              flexWrap: "wrap",
+            }}
+          >
             <Link
               href="/new-york"
               style={{
@@ -62,11 +85,12 @@ export default function Home() {
               href="/about"
               style={{
                 padding: "14px 22px",
-                border: "1px solid rgba(255,255,255,0.7)",
+                border: "1px solid rgba(255,255,255,0.6)",
                 color: "white",
                 borderRadius: "12px",
                 textDecoration: "none",
-                fontWeight: 600,
+                fontWeight: 500,
+                backdropFilter: "blur(4px)",
               }}
             >
               Why trust TripSage?
@@ -76,38 +100,55 @@ export default function Home() {
       </section>
 
       {/* Trust */}
-      <section style={{ padding: "80px 24px", maxWidth: "1200px", margin: "0 auto" }}>
-        <h2 style={{ fontSize: "36px", marginBottom: "32px" }}>Why travelers trust TripSage</h2>
+      <section
+        style={{
+          maxWidth: "1100px",
+          margin: "0 auto",
+          padding: "96px 24px",
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+          gap: "48px",
+        }}
+      >
+        <div>
+          <h3 style={{ fontSize: "20px", marginBottom: "8px" }}>
+            Transparent comparisons
+          </h3>
+          <p style={{ color: "#555" }}>
+            We compare tickets based on price, flexibility (refunds), and availability — not paid placements.
+          </p>
+        </div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-            gap: "24px",
-          }}
-        >
-          <div>
-            <strong>Transparent comparisons</strong>
-            <p style={{ color: "#555" }}>
-              We compare tickets based on price, flexibility (refunds), and availability — not paid placements.
-            </p>
-          </div>
+        <div>
+          <h3 style={{ fontSize: "20px", marginBottom: "8px" }}>
+            Trusted booking partners
+          </h3>
+          <p style={{ color: "#555" }}>
+            We only link to established platforms like GetYourGuide and Viator so you can book with confidence.
+          </p>
+        </div>
 
-          <div>
-            <strong>Trusted booking partners</strong>
-            <p style={{ color: "#555" }}>
-              We only link to established platforms like GetYourGuide and Viator.
-            </p>
-          </div>
-
-          <div>
-            <strong>No fake discounts</strong>
-            <p style={{ color: "#555" }}>
-              No inflated “was” prices. Just clear comparisons.
-            </p>
-          </div>
+        <div>
+          <h3 style={{ fontSize: "20px", marginBottom: "8px" }}>
+            No fake discounts
+          </h3>
+          <p style={{ color: "#555" }}>
+            No inflated “was” prices. No sponsored rankings. Just clear comparisons.
+          </p>
         </div>
       </section>
+
+      {/* Footer Disclosure (single source of truth) */}
+      <footer
+        style={{
+          textAlign: "center",
+          padding: "32px 16px 48px",
+          color: "#777",
+          fontSize: "14px",
+        }}
+      >
+        TripSage may earn a small commission if you book through our links, at no extra cost to you.
+      </footer>
     </main>
   );
 }
